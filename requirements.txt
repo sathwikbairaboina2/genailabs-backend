@@ -1,0 +1,7 @@
+fastapi==0.103.2
+uvicorn[standard]==0.23.2
+celery==5.3.4
+redis==5.0.1
+flower==2.0.0
+pydantic_settings
+# https://github.com/sathwikbairaboina2/genailabs-backend.git

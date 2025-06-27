@@ -1,0 +1,72 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+genai/
+.env
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# VS Code & JetBrains IDE configs
+.vscode/
+.idea/
+
+# MacOS & system files
+.DS_Store
+Thumbs.db
+
+# Test/coverage
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+*.cover
+test-results/
+tests/__pycache__/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+celerybeat-schedule
+*.pid
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb
+
+# Cache
+.cache/
+pip-wheel-metadata/
+__pypackages__/
+
+# FAISS index files (if saved locally)
+*.faiss
+*.index
+
+# Database files 
+*.sqlite3
+*.db
+
+# Uploaded files 
+uploads/
+tmp/
+
+# Docker
+*.tar
+*.img
+*.bak
