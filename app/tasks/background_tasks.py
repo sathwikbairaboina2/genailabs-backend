@@ -1,51 +1,70 @@
-import json
 import os
-from celery import Celery, signals
-import faiss
+import json
 import pandas as pd
-import numpy as np
+from typing import List, Dict
+from celery import Celery, signals
 from sentence_transformers import SentenceTransformer
+from langchain.docstore.document import Document
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_qdrant import QdrantVectorStore, RetrievalMode, FastEmbedSparse
+from qdrant_client import QdrantClient
 
 model = None
-index = None
+vector_store = None
 raw_df = None
 
-broker_url = os.environ.get("CELERY_BROKER_URL", "redis://localhost:6379")
-result_backend = os.environ.get("CELERY_RESULT_BACKEND", "redis://localhost:6379")
+broker_url = os.environ.get("CELERY_BROKER_URL", "redis://redis:6379")
+result_backend = os.environ.get("CELERY_RESULT_BACKEND", "redis://redis:6379")
+qdrant_host = os.environ.get("QDRANT_HOST", "http://qdrant:6333")
 
 celery_app = Celery("worker", backend=result_backend, broker=broker_url)
 
 @signals.worker_process_init.connect
-def setup_model(**kwargs):
-    global model, index, raw_df
+def setup_vector_store(**kwargs):
+    global model, vector_store, raw_df
 
     model = SentenceTransformer("all-MiniLM-L6-v2")
+    embedder = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    sparse_embedder = FastEmbedSparse(model_name="Qdrant/bm25")
 
     with open("app/utils/dataset.json", "r") as f:
         records = json.load(f)
 
     raw_df = pd.DataFrame(records)
 
-    def combine_fields(record):
-        return " | ".join(f"{k}: {v}" for k, v in record.items())
+    documents = [
+        Document(
+            page_content=row["text"],
+            metadata={k: v for k, v in row.items() if k != "text"}
+        )
+        for row in records if "text" in row
+    ]
 
-    raw_df["combined_text"] = raw_df.apply(lambda row: combine_fields(row), axis=1)
+    client = QdrantClient(url=qdrant_host)
 
-    texts = raw_df["combined_text"].tolist()
-    embeddings = model.encode(texts, convert_to_numpy=True)
-
-    dim = embeddings.shape[1]
-    index = faiss.IndexFlatL2(dim)
-    index.add(np.array(embeddings).astype("float32"))
+    vector_store = QdrantVectorStore.from_documents(
+        documents=documents,
+        embedding=embedder,
+        sparse_embedding=sparse_embedder,
+        url=qdrant_host,
+        collection_name="my_collection",
+        prefer_grpc=False,
+        force_recreate=True,
+        retrieval_mode=RetrievalMode.HYBRID
+    )
 
 @celery_app.task
-def semantic_search(query: str, top_k: int = 3):
-    global model, index, raw_df
+def semantic_search(query: str, top_k: int = 5, min_score: float = 0.5) -> List[Dict]:
+    global vector_store
 
-    query_vec = model.encode([query], convert_to_numpy=True).astype("float32")
-    distances, indices = index.search(query_vec, top_k)
+    results = vector_store.similarity_search_with_score(query, k=top_k)
 
-    results = raw_df.iloc[indices[0]].copy()
-    results["similarity_score"] = 1 / (1 + distances[0])
+    filtered = []
+    for doc, score in results:
+        if score >= min_score:
+            meta = dict(doc.metadata)
+            meta["similarity_score"] = round(score, 4)
+            meta["text"] = doc.page_content
+            filtered.append(meta)
 
-    return results.drop(columns=["combined_text"]).to_dict(orient="records")
+    return filtered

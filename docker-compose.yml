@@ -6,24 +6,29 @@ services:
     command: python run.py
     depends_on:
       - redis
+      - qdrant
     ports:
       - "8001:8000"
     restart: unless-stopped
     environment:
       - CELERY_BROKER_URL=redis://redis:6379
       - CELERY_RESULT_BACKEND=redis://redis:6379
+      - QDRANT_HOST=qdrant
+      - GRPC_DNS_RESOLVER=native
 
   celery:
     image: genailabs
     container_name: celery-worker
-    command: celery -A app.tasks.background_tasks worker --loglevel=info --concurrency=1     
+    command: celery -A app.tasks.background_tasks worker --loglevel=info --concurrency=1
     depends_on:
       - redis
-      - app
+      - qdrant
     restart: unless-stopped
     environment:
       - CELERY_BROKER_URL=redis://redis:6379
       - CELERY_RESULT_BACKEND=redis://redis:6379
+      - QDRANT_HOST=qdrant
+      - GRPC_DNS_RESOLVER=native
 
   redis:
     image: redis:7.2
@@ -34,5 +39,16 @@ services:
       - redis_data:/data
     restart: unless-stopped
 
+  qdrant:
+    image: qdrant/qdrant
+    container_name: qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+
 volumes:
   redis_data:
+  qdrant_data:

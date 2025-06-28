@@ -4,6 +4,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     CELERY_BROKER_URL: str = "redis://127.0.0.1:6379/0"
     CELERY_BACKEND_URL: str = "redis://127.0.0.1:6379/0"
+    QDRANT_HOST: str = "http://127.0.0.1:6333"
 
     class Config:
         env_file = ".env"
