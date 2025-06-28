@@ -1,0 +1,961 @@
+[
+  {
+    "id": "mucuna_01_intro",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 1,
+    "section_heading": "Velvet bean description",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 42,
+    "attributes": [
+      "Botanical description",
+      "Morphology"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean–Mucuna pruriens var. utilis, also known as mucuna—is a twining annual leguminous vine common to most parts of the tropics. Its growth is restricted to the wet-season as it dies at the onset of the cold season. It has large trifoliate leaves (i.e. has three leaflets) and very long vigorous twining stems that can extend over two–three metres depending on growth conditions. When planted at the beginning of the growing season, flowers normally form at the end of March/early April. These flowers are deep purple and appear underneath the foliage. Seeds are large, ovoid shaped (±10 mm long) and of different colours, ranging from white, grey, brown to black and mottled."
+  },
+  {
+    "id": "mucuna_02_why_grow_1",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 2,
+    "section_heading": "Why grow the velvet bean? (part 1)",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 35,
+    "attributes": [
+      "Soil fertility",
+      "Green manure",
+      "Cover crop"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "The velvet bean can be grown for soil fertility, green manure and as a cover crop in conservation agriculture (CA). The velvet bean is a high yielding leguminous forage crop—high in nitrogen (N)/crude protein content. It is usually sown as an N-fixing ley crop or as a green manure crop to improve soil fertility. In the sub-humid regions it can be intercropped with maize to improve soil fertility, maximize grain/herbage yields per unit area and provide mixed crop for hay/silage making. Whether it is grown as a single or mixed crop, the velvet bean provides early dry season grazing or fodder for hay or mixed-crop silage, improving the N content of cereal or grass silage."
+  },
+  {
+    "id": "mucuna_03_why_grow_2",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 3,
+    "section_heading": "Why grow the velvet bean? (part 2)",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 28,
+    "attributes": [
+      "Feed value",
+      "Seed protein"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "The hay and silage can be used as supplementary feed during the dry season to improve the digestibility of poor quality roughages, such as maize stover. Mucuna is a prolific seeder and its seed (26 % crude protein) can be used in home-mixed rations to replace commercial supplements. However, its grain is not so useful to non-ruminant livestock. It can only be used for human consumption after reducing its toxicity by boiling and discarding the water several times."
+  },
+  {
+    "id": "mucuna_04_site_selection",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 4,
+    "section_heading": "Site selection – Climate and soils",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 25,
+    "attributes": [
+      "Climate",
+      "Rainfall",
+      "Soil adaptation"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean performs best in regions with long growing seasons and prefers hot moist areas that receive 650–2500 mm of rainfall per annum. It can withstand long dry spells, especially when established early in the growing season. Consequently, velvet bean farming is increasingly being adopted in semi-arid regions (e.g. natural regions IV and V of Zimbabwe). It will grow well into the dry season until frosted or deep soil moisture runs out. Its seeds mature around May and June. Velvet bean grows well in a wide range of soils, including relatively infertile sandy soils."
+  },
+  {
+    "id": "mucuna_05_land_prep",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 5,
+    "section_heading": "Cultivation practices – Land preparation & fertilizer",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 18,
+    "attributes": [
+      "Land preparation",
+      "Lime",
+      "Phosphorus"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Due to its large seeds, the crop does not require a lot of land preparation. Minimal soil disturbance is encouraged in CA systems using manual or mechanized equipment. Application of 500–700 kg/ha lime (preferably dolomitic lime on sandy soils) is recommended to encourage nodulation and efficient use of fertilizers. Mucuna will thrive on soils where available soil phosphorus (P) is low. Application of 200–250 kg/ha single superphosphate (18.5 % P2O5) is sufficient for optimum herbage and seed production. Alternatively, one can apply 250–300 kg of compound fertilizer (preferably 7 N : 14 P : 7 K)."
+  },
+  {
+    "id": "mucuna_06_plant_single",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 6,
+    "section_heading": "Planting as a single crop",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 12,
+    "attributes": [
+      "Planting",
+      "Seed rate"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Seed is sown at a rate of 35–40 kg/ha in single crops at the beginning of the wet season, using inter-row spacing of 0.9–1 m and within-row spacing of 30–40 cm. A lower seed rate (wider spacing) is advisable in semi-arid conditions, to reduce competition for moisture. Mucuna seeds are large and should be planted at a depth of 3–7 cm."
+  },
+  {
+    "id": "mucuna_07_plant_intercrop",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 7,
+    "section_heading": "Intercropping with maize or sorghum",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 9,
+    "attributes": [
+      "Intercropping",
+      "Timing"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "The velvet bean is a very vigorous climber; therefore it should be planted in-between cereals 3–4 weeks after they emerge (depending on predicted annual rainfall), ideally after the first hand weeding if farmers are not using herbicides. If planted too early and densely, it can choke the cereal, thereby reducing cereal yield. Planting the velvet bean within the same row as maize and in-between the maize plants facilitates weeding and spraying. However, delaying the planting of legume for more than four weeks after sowing cereals may result in shading by the cereal crop and severe reduction in legume yield. It is advisable to sow one pip per station, at a spacing of 50 cm within a row."
+  },
+  {
+    "id": "mucuna_08_weeds_pests",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 8,
+    "section_heading": "Weed, pest and disease control",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 6,
+    "attributes": [
+      "Weeds",
+      "Pests",
+      "Diseases"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Farmers are advised to keep the crop weed-free by weeding as soon as weeds appear. This will also reduce pest infestation. The velvet bean is well known for resistance to most pests and diseases. However, there have been reports of complete devastation by leaf-eating caterpillars. Farmers should consult their local extension officer for advice on controlling disease outbreaks or pest damage, including advice on the compatibility of crop chemicals when they desire to use herbicides."
+  },
+  {
+    "id": "mucuna_09_harvest",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 9,
+    "section_heading": "Harvesting time and yield estimates",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 15,
+    "attributes": [
+      "Harvest",
+      "Yield",
+      "Protein"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Mucuna is normally harvested for hay once in the growing season—usually at 50 % booting. Flowering occurs in early March and is triggered by the shorter days and cooler night temperatures (21 °C). Due to its profuse seeding ability and the high feeding value of its grain, farmers prefer to harvest it when the pods are mature and dry; then they can harvest the foliage residue together with the pods. Mucuna has achieved average herbage yields of 7–11 t dry matter/ha in natural region II and 4–6 t dry matter/ha in regions IV and V of Zimbabwe, when harvested at booting stage."
+  },
+  {
+    "id": "mucuna_10_conserve_seed",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 10,
+    "section_heading": "Fodder conservation and seed production",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 3,
+    "attributes": [
+      "Hay making",
+      "Silage",
+      "Seed cleaning"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Boot-stage hay dries to 75–80 % dry matter in 3–5 days. Intercropped forage is best conserved as silage; no sugar additives are required if the mixed crop is harvested when the cereal component is at milk-dough stage. Pods can be hand-harvested and spread under shade to dry before shelling by pounding with long sticks; clean seed is obtained by winnowing. Mucuna can yield up to 2 t of clean seed per hectare, and the shell-to-grain ratio is normally 1:1."
+  },
+  {
+    "id": "transformer_01_abstract",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 1,
+    "section_heading": "Abstract",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 55,
+    "attributes": [
+      "Attention",
+      "Machine translation"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data."
+  },
+  {
+    "id": "transformer_02_intro_1",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 2,
+    "section_heading": "1 Introduction (paragraph 1)",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 47,
+    "attributes": [
+      "RNNs",
+      "Sequence modeling"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly established as state of the art approaches in sequence modeling and transduction problems such as language modeling and machine translation [35, 2, 5]. Numerous efforts have since continued to push the boundaries of recurrent language models and encoder-decoder architectures [38, 24, 15]."
+  },
+  {
+    "id": "transformer_03_intro_2",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 3,
+    "section_heading": "1 Introduction (paragraph 2)",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 40,
+    "attributes": [
+      "Sequential computation",
+      "Parallelization"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Recurrent models typically factor computation along the symbol positions of the input and output sequences. Aligning the positions to steps in computation time, they generate a sequence of hidden states ht, as a function of the previous hidden state ht−1 and the input for position t. This inherently sequential nature precludes parallelization within training examples, which becomes critical at longer sequence lengths, as memory constraints limit batching across examples. Recent work has achieved significant improvements in computational efficiency through factorization tricks [21] and conditional computation [32], while also improving model performance in case of the latter. The fundamental constraint of sequential computation, however, remains."
+  },
+  {
+    "id": "transformer_04_intro_3",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 4,
+    "section_heading": "1 Introduction (paragraphs 3–4)",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 35,
+    "attributes": [
+      "Attention mechanisms",
+      "Transformer proposal"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Attention mechanisms have become an integral part of compelling sequence modeling and transduction models in various tasks, allowing modeling of dependencies without regard to their distance in the input or output sequences [2, 19]. In all but a few cases [27], however, such attention mechanisms are used in conjunction with a recurrent network. In this work we propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between input and output. The Transformer allows for significantly more parallelization and can reach a new state of the art in translation quality after being trained for as little as twelve hours on eight P100 GPUs."
+  },
+  {
+    "id": "transformer_05_background",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 5,
+    "section_heading": "2 Background (first 2 paragraphs)",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 30,
+    "attributes": [
+      "Extended Neural GPU",
+      "ByteNet",
+      "ConvS2S"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The goal of reducing sequential computation also forms the foundation of the Extended Neural GPU [16], ByteNet [18] and ConvS2S [9], all of which use convolutional neural networks as basic building block, computing hidden representations in parallel for all input and output positions. In these models, the number of operations required to relate signals from two arbitrary input or output positions grows in the distance between positions, linearly for ConvS2S and logarithmically for ByteNet. This makes it more difficult to learn dependencies between distant positions [12]. In the Transformer this is reduced to a constant number of operations, albeit at the cost of reduced effective resolution due to averaging attention-weighted positions, an effect we counteract with Multi-Head Attention as described in section 3.2."
+  },
+  {
+    "id": "mucuna_11_nutritional_benefits",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 16,
+    "section_heading": "Nutritional benefits for livestock",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 20,
+    "attributes": [
+      "Livestock feed",
+      "Protein content"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean is highly valued as a livestock feed due to its high protein content, which ranges from 20–26% in seeds and 15–18% in foliage. When used as hay or silage, it enhances the nutritional quality of diets, particularly for ruminants like cattle and goats. The crop’s nitrogen-fixing ability improves the protein content of mixed silage when intercropped with cereals like maize. However, care must be taken when feeding mucuna to non-ruminants, as its seeds contain anti-nutritional factors like L-DOPA, which require processing (e.g., boiling) to reduce toxicity. Properly processed mucuna seeds can replace costly commercial protein supplements, reducing feed costs for smallholder farmers in tropical regions."
+  },
+  {
+    "id": "mucuna_12_soil_health",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 17,
+    "section_heading": "Soil health improvement",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 22,
+    "attributes": [
+      "Nitrogen fixation",
+      "Soil organic matter"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean significantly enhances soil health through its nitrogen-fixing properties, adding up to 150 kg/ha of nitrogen to the soil when used as a green manure crop. Its deep root system improves soil structure, increases organic matter, and reduces erosion in conservation agriculture systems. In semi-arid regions, mucuna’s ability to grow on poor soils makes it an ideal cover crop, protecting the soil from degradation during dry spells. Farmers report improved yields of subsequent crops, such as maize, by 20–30% when mucuna is incorporated into crop rotations. Regular use of mucuna can also reduce the need for synthetic fertilizers, lowering costs and environmental impact."
+  },
+  {
+    "id": "mucuna_13_seed_treatment",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 18,
+    "section_heading": "Seed treatment and germination",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 14,
+    "attributes": [
+      "Seed treatment",
+      "Germination"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "To enhance germination, velvet bean seeds should be treated before planting. Soaking seeds in water for 24 hours or scarifying them mechanically (e.g., nicking the seed coat) can improve germination rates, which typically range from 70–90%. Treated seeds germinate within 5–7 days under optimal conditions (25–30°C and adequate moisture). Farmers should avoid planting untreated seeds, as the hard seed coat can delay germination. Inoculation with rhizobium bacteria is recommended to enhance nodulation and nitrogen fixation, especially in soils with low microbial activity. Proper seed treatment ensures uniform crop establishment and maximizes yields."
+  },
+  {
+    "id": "mucuna_14_water_management",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 19,
+    "section_heading": "Water management for velvet bean",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 10,
+    "attributes": [
+      "Irrigation",
+      "Water conservation"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean is relatively drought-tolerant but requires adequate water during germination and early growth. In regions with 650–1000 mm annual rainfall, supplemental irrigation may be needed during establishment if rainfall is inconsistent. Conservation agriculture practices, such as mulching, help retain soil moisture and reduce water stress in semi-arid areas. Over-irrigation should be avoided, as waterlogging can stunt root development and reduce nitrogen fixation. In intercropping systems, velvet bean benefits from the shade provided by cereals, reducing evaporation. Farmers should monitor soil moisture levels to optimize growth and ensure seed maturity by May or June."
+  },
+  {
+    "id": "mucuna_15_economic_benefits",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 20,
+    "section_heading": "Economic benefits of velvet bean",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 17,
+    "attributes": [
+      "Cost reduction",
+      "Income generation"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean offers significant economic benefits for smallholder farmers. Its high seed yield (up to 2 t/ha) and fodder production reduce the need for expensive commercial feeds and fertilizers. By replacing synthetic nitrogen fertilizers with mucuna’s nitrogen-fixing ability, farmers can save 30–50% on input costs. The crop’s seeds can be sold as a protein supplement for livestock feed markets, generating additional income. In regions like Zimbabwe, mucuna-based silage and hay are increasingly popular, fetching competitive prices. The crop’s low input requirements and adaptability to poor soils make it a cost-effective option for sustainable farming."
+  },
+  {
+    "id": "transformer_06_model_architecture",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 21,
+    "section_heading": "3 Model Architecture (Overview)",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 45,
+    "attributes": [
+      "Encoder-Decoder",
+      "Attention layers"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer model follows an encoder-decoder architecture, replacing traditional recurrent layers with stacked multi-head self-attention and point-wise feed-forward layers. The encoder consists of six identical layers, each with two sub-layers: a multi-head self-attention mechanism and a fully connected feed-forward network. The decoder also has six layers, with an additional sub-layer for attending to the encoder’s output. Layer normalization is applied to each sub-layer, and residual connections ensure stable training. This architecture enables parallel processing of input sequences, significantly reducing training time compared to RNNs while achieving superior performance in tasks like machine translation."
+  },
+  {
+    "id": "transformer_07_attention_mechanism",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 22,
+    "section_heading": "3.1 Scaled Dot-Product Attention",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 38,
+    "attributes": [
+      "Attention",
+      "Scaled dot-product"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer uses scaled dot-product attention, where queries (Q), keys (K), and values (V) are vectors used to compute attention scores. The attention mechanism calculates the dot product of the query with all keys, divides by the square root of the key dimension (to stabilize gradients), and applies a softmax to obtain weights on the values. This process allows the model to focus on relevant parts of the input sequence, regardless of their position. Scaled dot-product attention is computationally efficient and supports parallelization, making it ideal for large-scale sequence modeling tasks like translation."
+  },
+  {
+    "id": "transformer_08_multi_head",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 23,
+    "section_heading": "3.2 Multi-Head Attention",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 42,
+    "attributes": [
+      "Multi-head attention",
+      "Parallelization"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Multi-head attention enhances the Transformer’s ability to capture different types of dependencies by performing attention multiple times in parallel. Each head computes attention independently, projecting the input into different subspaces. The outputs are concatenated and linearly transformed to produce the final result. This approach allows the model to jointly attend to information from different representation subspaces at different positions, improving its ability to model complex relationships in sequences. For example, in translation, multi-head attention captures syntactic and semantic dependencies, boosting performance on tasks like WMT 2014 English-to-German."
+  },
+  {
+    "id": "mucuna_16_pest_resistance",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 24,
+    "section_heading": "Pest resistance mechanisms",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 8,
+    "attributes": [
+      "Pest resistance",
+      "Natural defenses"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean exhibits natural resistance to many pests due to its high levels of L-DOPA and other secondary metabolites, which deter herbivores and insects. These compounds make the plant less palatable to common pests like aphids and beetles. However, leaf-eating caterpillars can occasionally cause significant damage, particularly in humid conditions. Regular scouting and early weeding reduce pest habitats, enhancing the crop’s natural defenses. Farmers can use biopesticides compatible with conservation agriculture to manage outbreaks without harming beneficial soil organisms. Consulting local extension services ensures effective pest control tailored to regional conditions."
+  },
+  {
+    "id": "mucuna_17_crop_rotation",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 25,
+    "section_heading": "Crop rotation with velvet bean",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 13,
+    "attributes": [
+      "Crop rotation",
+      "Soil fertility"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Incorporating velvet bean into crop rotations enhances soil fertility and reduces pest and disease pressure. Its nitrogen-fixing ability enriches the soil, benefiting subsequent crops like maize or sorghum. A typical rotation involves planting mucuna as a green manure crop in one season, followed by a cereal crop in the next. This practice can increase cereal yields by 15–25% in nutrient-poor soils. Velvet bean’s deep roots also break up compacted soil, improving water infiltration. Farmers should rotate mucuna every 2–3 years to prevent soil-borne diseases and maintain long-term soil health."
+  },
+  {
+    "id": "transformer_09_feed_forward",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 26,
+    "section_heading": "3.3 Feed-Forward Networks",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 33,
+    "attributes": [
+      "Feed-forward",
+      "Layer normalization"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Each layer of the Transformer includes a fully connected feed-forward network applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between. The feed-forward network enhances the model’s capacity to learn complex patterns in the data. Residual connections and layer normalization are applied around each sub-layer to stabilize training and improve gradient flow. This design ensures that the Transformer can process sequences efficiently while maintaining high performance across tasks like machine translation and parsing."
+  },
+  {
+    "id": "transformer_10_positional_encoding",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 27,
+    "section_heading": "3.4 Positional Encoding",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 36,
+    "attributes": [
+      "Positional encoding",
+      "Sequence order"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Since the Transformer lacks recurrence, it uses positional encodings to incorporate information about the order of the sequence. These encodings are added to the input embeddings at the bottoms of the encoder and decoder stacks. The Transformer employs sine and cosine functions of different frequencies to generate positional encodings, allowing the model to generalize to varying sequence lengths. This approach ensures that the model can distinguish the position of each token, critical for tasks like translation where word order significantly impacts meaning."
+  },
+  {
+    "id": "mucuna_18_harvest_techniques",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 28,
+    "section_heading": "Advanced harvesting techniques",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 11,
+    "attributes": [
+      "Harvesting",
+      "Mechanization"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Harvesting velvet bean efficiently requires careful timing and technique to maximize yield. For hay, cutting at 50% booting stage ensures optimal nutrient content. Mechanized harvesters can be used in large-scale farms, but smallholder farmers typically rely on manual cutting with sickles. For seed production, pods should be harvested when fully mature and dry, typically in May or June. Hand-harvesting pods and drying them under shade prevents seed damage. Threshing can be done manually or with small-scale machinery, followed by winnowing to obtain clean seeds. Proper drying reduces moisture content to 10–12%, ensuring seed viability for storage."
+  },
+  {
+    "id": "mucuna_19_storage_practices",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 29,
+    "section_heading": "Seed and fodder storage",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 7,
+    "attributes": [
+      "Storage",
+      "Seed preservation"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Proper storage of velvet bean seeds and fodder is crucial to maintain quality. Seeds should be stored in airtight containers in a cool, dry place to prevent mold and pest damage. Treating seeds with natural preservatives like neem oil can extend shelf life. Hay and silage should be stored in dry, well-ventilated areas to avoid spoilage. Silage must be tightly packed in silos or bags to exclude air and promote fermentation. Regular inspection ensures no contamination occurs. For smallholder farmers, using locally available materials like burlap sacks for seeds and covered pits for silage is cost-effective."
+  },
+  {
+    "id": "transformer_11_training",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 30,
+    "section_heading": "4 Training",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 39,
+    "attributes": [
+      "Training",
+      "Optimization"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer is trained using the Adam optimizer with a custom learning rate schedule that increases linearly for the first 4000 steps and then decays proportionally to the inverse square root of the step number. Dropout is applied to prevent overfitting, and label smoothing improves performance by reducing overconfidence in predictions. The model is trained on eight NVIDIA P100 GPUs, achieving high throughput due to its parallelizable architecture. For the WMT 2014 English-to-German task, training takes approximately 12 hours, significantly faster than recurrent models, demonstrating the Transformer’s efficiency."
+  },
+  {
+    "id": "mucuna_20_soil_erosion",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 31,
+    "section_heading": "Preventing soil erosion",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 16,
+    "attributes": [
+      "Soil erosion",
+      "Cover crop"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean serves as an effective cover crop to prevent soil erosion in tropical and semi-arid regions. Its dense foliage and extensive root system stabilize soil, reducing runoff during heavy rains. In conservation agriculture, mucuna is often planted on slopes or degraded lands to protect topsoil. The crop’s ability to grow in low-fertility soils makes it ideal for restoring eroded areas. By adding organic matter through its biomass, velvet bean improves soil structure, increasing water retention and reducing erosion by up to 40% in some studies. Regular use enhances long-term soil stability."
+  },
+  {
+    "id": "transformer_12_evaluation",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 32,
+    "section_heading": "5 Evaluation",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 37,
+    "attributes": [
+      "BLEU score",
+      "Translation quality"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer’s performance is evaluated on the WMT 2014 English-to-German and English-to-French translation tasks. It achieves a BLEU score of 28.4 on English-to-German, surpassing previous best results by over 2 BLEU points. For English-to-French, it sets a new single-model state-of-the-art score of 41.8. The model also demonstrates strong generalization to other tasks, such as English constituency parsing, where it performs competitively even with limited training data. These results highlight the Transformer’s ability to deliver high-quality translations with reduced training time compared to traditional models."
+  },
+  {
+    "id": "mucuna_21_farm_management",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 33,
+    "section_heading": "Farm management practices",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 9,
+    "attributes": [
+      "Farm management",
+      "Sustainability"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Effective farm management with velvet bean involves integrating it into sustainable practices. Farmers should monitor crop growth stages to time planting, weeding, and harvesting accurately. Using conservation agriculture techniques, such as minimal tillage and mulching, enhances mucuna’s benefits for soil health and water conservation. Regular soil testing ensures optimal nutrient levels, particularly phosphorus, which supports nodulation. Intercropping with cereals requires careful timing to balance yields. Extension services can provide training on these practices, helping farmers maximize mucuna’s contributions to productivity and sustainability in tropical farming systems."
+  },
+  {
+    "id": "transformer_13_applications",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 34,
+    "section_heading": "6 Applications Beyond Translation",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 34,
+    "attributes": [
+      "Parsing",
+      "Generalization"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Beyond machine translation, the Transformer shows strong performance in other sequence modeling tasks, such as English constituency parsing. It achieves competitive results on both large and limited training datasets, demonstrating its ability to generalize across tasks. The model’s attention-based architecture allows it to capture long-range dependencies effectively, making it suitable for tasks like text summarization, question answering, and language modeling. The Transformer’s efficiency and parallelization capabilities make it a versatile choice for a wide range of natural language processing applications."
+  },
+  {
+    "id": "mucuna_22_livestock_integration",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 35,
+    "section_heading": "Integrating with livestock systems",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 12,
+    "attributes": [
+      "Livestock integration",
+      "Fodder"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean integrates well into mixed crop-livestock systems, providing high-quality fodder for ruminants. Its foliage and seeds can be used to supplement dry-season feed, improving animal weight gain and milk production. In Zimbabwe, farmers report a 15–20% increase in cattle productivity when mucuna silage is included in diets. The crop’s high protein content reduces reliance on commercial feeds, lowering costs. Intercropping with maize provides dual-purpose benefits: grain for human consumption and fodder for livestock. Farmers should ensure proper processing of seeds to minimize toxicity for safe feeding."
+  },
+  {
+    "id": "transformer_14_ablation",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 36,
+    "section_heading": "7 Ablation Studies",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 31,
+    "attributes": [
+      "Ablation study",
+      "Model components"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Ablation studies on the Transformer reveal the importance of its components. Removing multi-head attention reduces performance significantly, as single-head attention fails to capture diverse dependencies. Dropping positional encodings degrades the model’s ability to handle sequence order, lowering BLEU scores by 1–2 points. The feed-forward networks and residual connections also contribute to stability and performance, with their absence leading to training instability. These studies confirm that the Transformer’s architecture is carefully balanced to achieve high efficiency and quality in sequence transduction tasks."
+  },
+  {
+    "id": "mucuna_23_climate_adaptation",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 37,
+    "section_heading": "Adaptation to climate variability",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 10,
+    "attributes": [
+      "Climate adaptation",
+      "Drought tolerance"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean’s adaptability to climate variability makes it a resilient crop for tropical and semi-arid regions. Its drought tolerance allows it to thrive in areas with unpredictable rainfall, such as Zimbabwe’s natural regions IV and V. Early planting ensures establishment before dry spells, while its deep roots access subsoil moisture. In high-rainfall areas (up to 2500 mm), mucuna prevents nutrient leaching by stabilizing soil. Farmers can use mucuna in climate-smart agriculture to buffer against erratic weather, ensuring stable fodder and seed production even in challenging conditions."
+  },
+  {
+    "id": "transformer_15_limitations",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 38,
+    "section_heading": "8 Limitations and Future Work",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 29,
+    "attributes": [
+      "Limitations",
+      "Future work"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "While the Transformer outperforms recurrent models, it has limitations. Its memory requirements scale with sequence length, which can be challenging for very long sequences. The averaging effect in attention mechanisms may reduce resolution for certain tasks. Future work includes exploring techniques to handle longer sequences, such as sparse attention, and improving computational efficiency for low-resource devices. Additionally, applying the Transformer to non-NLP tasks, like image processing, could expand its applicability. These directions aim to address the model’s scalability and versatility."
+  },
+  {
+    "id": "mucuna_24_seed_viability",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 39,
+    "section_heading": "Ensuring seed viability",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 5,
+    "attributes": [
+      "Seed viability",
+      "Storage"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Maintaining seed viability is critical for successful velvet bean cultivation. Seeds should be dried to 10–12% moisture content before storage to prevent fungal growth. Storing seeds in airtight containers with desiccants, such as silica gel, extends viability up to 2–3 years. Farmers should test germination rates annually, aiming for at least 70%. Avoiding exposure to high temperatures and humidity is essential. In tropical regions, using elevated storage platforms prevents pest damage. Regular seed quality checks ensure reliable planting material for consistent crop performance."
+  },
+  {
+    "id": "transformer_16_comparison",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 40,
+    "section_heading": "9 Comparison with Other Models",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 32,
+    "attributes": [
+      "Model comparison",
+      "Performance"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer outperforms previous models like RNNs, LSTMs, and convolutional networks in machine translation tasks. Compared to ConvS2S and ByteNet, it requires fewer operations to capture long-range dependencies, achieving constant-time complexity. On the WMT 2014 English-to-German task, the Transformer’s BLEU score of 28.4 surpasses ensembles of recurrent models by over 2 points. Its parallelization capabilities reduce training time significantly, making it more efficient than models like Deep-Att and GNMT. These advantages highlight the Transformer’s superiority in both quality and speed."
+  },
+  {
+    "id": "mucuna_25_farm_training",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 41,
+    "section_heading": "Farmer training and extension",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 8,
+    "attributes": [
+      "Farmer training",
+      "Extension services"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Training farmers on velvet bean cultivation is essential for adoption. Extension services should provide hands-on workshops on seed treatment, planting, and intercropping techniques. Demonstrations of conservation agriculture practices, such as minimal tillage and mulching, help farmers understand mucuna’s soil health benefits. Training should also cover safe seed processing for livestock feed to avoid toxicity. In Zimbabwe, ILRI’s extension programs have increased mucuna adoption by 25% through farmer field schools. Regular follow-ups and access to quality seeds ensure sustained use and improved farm productivity."
+  },
+  {
+    "id": "transformer_17_implementation",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 42,
+    "section_heading": "10 Implementation Details",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 28,
+    "attributes": [
+      "Implementation",
+      "Hyperparameters"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer is implemented with a model dimension of 512, 8 attention heads, and 6 encoder/decoder layers. The feed-forward networks have an inner dimension of 2048. Training uses a batch size of 25,000 tokens and a maximum sequence length of 100. Dropout rates are set to 0.1 for attention and 0.3 for feed-forward layers. The model is optimized with Adam, using β1=0.9, β2=0.98, and ε=10^-9. These hyperparameters balance computational efficiency and performance, enabling the Transformer to achieve state-of-the-art results with minimal training time."
+  },
+  {
+    "id": "mucuna_26_allelopathy",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 43,
+    "section_heading": "Allelopathic effects",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 6,
+    "attributes": [
+      "Allelopathy",
+      "Weed suppression"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean exhibits allelopathic effects, suppressing weed growth through the release of chemical compounds from its roots and foliage. These compounds inhibit the germination and growth of certain weeds, reducing competition for nutrients and water. In conservation agriculture, mucuna’s allelopathy can decrease weeding labor by up to 30%. However, farmers must ensure that these effects do not harm subsequent crops, particularly sensitive cereals. Rotating mucuna with non-sensitive crops like maize mitigates potential negative impacts while maximizing weed control benefits."
+  },
+  {
+    "id": "transformer_18_data_preprocessing",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 44,
+    "section_heading": "11 Data Preprocessing",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 27,
+    "attributes": [
+      "Data preprocessing",
+      "Tokenization"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Data preprocessing for the Transformer involves tokenizing input and output sequences using subword units, such as Byte Pair Encoding (BPE). The WMT 2014 datasets are preprocessed to create a shared vocabulary of 32,000 subword units for English-to-German and English-to-French tasks. This approach reduces the vocabulary size while preserving the ability to handle rare words. Preprocessing also includes padding sequences to a fixed length and filtering out noisy or overly long sentences, ensuring efficient training and high-quality translations."
+  },
+  {
+    "id": "mucuna_27_marketing",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 45,
+    "section_heading": "Marketing velvet bean products",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 7,
+    "attributes": [
+      "Marketing",
+      "Seed sales"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean seeds and fodder products have a growing market in tropical regions. Farmers can sell clean seeds as livestock feed supplements, fetching competitive prices due to their high protein content. Silage and hay are also in demand for mixed crop-livestock systems. Effective marketing involves partnering with local cooperatives to distribute seeds and fodder. Branding mucuna products as sustainable and cost-effective can attract buyers. In Zimbabwe, farmer groups have increased incomes by 15–20% through collective marketing of mucuna-based products to regional feed suppliers."
+  },
+  {
+    "id": "transformer_19_hardware",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 46,
+    "section_heading": "12 Hardware and Training Efficiency",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 26,
+    "attributes": [
+      "Hardware",
+      "Training efficiency"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer’s training is optimized for high-performance hardware, specifically eight NVIDIA P100 GPUs. Its parallelizable architecture allows for efficient use of GPU resources, processing large batches of tokens simultaneously. Training on the WMT 2014 English-to-German task takes approximately 12 hours, a significant reduction compared to recurrent models, which may require days or weeks. The model’s efficiency stems from its lack of sequential dependencies, enabling faster computation and lower energy consumption, making it suitable for large-scale NLP applications."
+  },
+  {
+    "id": "mucuna_28_nutrient_cycling",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 47,
+    "section_heading": "Nutrient cycling benefits",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 9,
+    "attributes": [
+      "Nutrient cycling",
+      "Soil fertility"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean enhances nutrient cycling by fixing atmospheric nitrogen and recycling organic matter. Its biomass, when incorporated into the soil, releases nutrients like nitrogen and phosphorus, improving soil fertility for subsequent crops. In tropical systems, mucuna can contribute up to 120 kg/ha of nitrogen annually. Its deep roots also bring up nutrients from deeper soil layers, making them available to shallow-rooted crops. This nutrient cycling reduces dependency on chemical fertilizers, promoting sustainable agriculture and lowering costs for smallholder farmers in regions like Zimbabwe."
+  },
+  {
+    "id": "transformer_20_generalization",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 48,
+    "section_heading": "13 Generalization to Other Tasks",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 25,
+    "attributes": [
+      "Generalization",
+      "NLP tasks"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer’s architecture is highly generalizable, performing well on tasks beyond translation, such as constituency parsing and language modeling. Its attention mechanisms allow it to capture complex dependencies in text, making it adaptable to tasks like text summarization and question answering. Experiments show that the Transformer achieves competitive results even with limited training data, highlighting its robustness. This versatility has led to its widespread adoption in modern NLP frameworks, influencing models like BERT and GPT."
+  },
+  {
+    "id": "mucuna_29_community_impact",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 49,
+    "section_heading": "Community impact of velvet bean",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 6,
+    "attributes": [
+      "Community impact",
+      "Sustainable agriculture"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean cultivation has a positive impact on rural communities by improving food security and livelihoods. Its low input costs and high yields make it accessible to smallholder farmers, while its fodder and seed products support livestock-based income. In Zimbabwe, mucuna adoption has strengthened community cooperatives, enabling collective marketing and seed sharing. The crop’s environmental benefits, like soil conservation, enhance long-term agricultural sustainability. Training programs and extension services further empower communities, increasing resilience to climate variability and economic challenges."
+  },
+  {
+    "id": "transformer_21_attention_variants",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 50,
+    "section_heading": "14 Attention Mechanism Variants",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 24,
+    "attributes": [
+      "Attention variants",
+      "Model performance"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer explores variants of attention mechanisms to optimize performance. Alternatives to scaled dot-product attention, such as additive attention, were tested but found less effective due to higher computational costs. Multi-head attention consistently outperforms single-head variants by capturing diverse dependencies. Experiments with different numbers of heads (4, 8, 16) show that 8 heads provide a good balance of performance and efficiency. These findings underscore the importance of multi-head attention in achieving the Transformer’s state-of-the-art results in translation tasks."
+  },
+  {
+    "id": "mucuna_30_seed_distribution",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 51,
+    "section_heading": "Seed distribution networks",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 5,
+    "attributes": [
+      "Seed distribution",
+      "Farmer networks"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Effective seed distribution networks are key to scaling velvet bean cultivation. Local cooperatives and extension services in regions like Zimbabwe facilitate access to high-quality seeds. Farmer-to-farmer seed exchange programs ensure affordability and availability, particularly for smallholders. NGOs and agricultural research institutions, such as ILRI, provide certified seeds to kickstart cultivation. These networks also offer training on seed storage and treatment, boosting germination rates. Strengthening these systems can increase mucuna adoption by 20–30%, supporting sustainable farming and livestock productivity."
+  },
+  {
+    "id": "transformer_22_training_data",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 52,
+    "section_heading": "15 Training Data and Datasets",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 23,
+    "attributes": [
+      "Training data",
+      "WMT dataset"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer is trained on the WMT 2014 English-to-German and English-to-French datasets, containing approximately 4.5 million and 36 million sentence pairs, respectively. These datasets are preprocessed using Byte Pair Encoding to create a shared vocabulary of 32,000 subword units. Additional experiments on smaller datasets, like English constituency parsing, demonstrate the model’s ability to generalize with limited data. The diversity and scale of the WMT datasets enable the Transformer to achieve high BLEU scores, setting new benchmarks in machine translation."
+  },
+  {
+    "id": "mucuna_31_intercropping_benefits",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 53,
+    "section_heading": "Benefits of intercropping",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 8,
+    "attributes": [
+      "Intercropping",
+      "Yield improvement"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Intercropping velvet bean with cereals like maize or sorghum maximizes land use and boosts yields. The legume’s nitrogen fixation enhances soil fertility, increasing cereal yields by 15–20%. Its dense foliage suppresses weeds, reducing labor costs. Intercropped mucuna also provides high-quality fodder, supporting livestock during the dry season. Timing is critical: planting mucuna 3–4 weeks after cereals prevents competition while ensuring adequate growth. This practice is particularly effective in sub-humid regions, where it supports both food security and livestock production."
+  },
+  {
+    "id": "transformer_23_model_scaling",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 54,
+    "section_heading": "16 Model Scaling and Performance",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 22,
+    "attributes": [
+      "Model scaling",
+      "Performance"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Scaling the Transformer model by increasing the number of layers or attention heads improves performance but increases computational cost. Experiments show that a base model with 6 layers and 8 heads achieves optimal results for the WMT 2014 tasks. Larger models (e.g., 12 layers) yield marginal gains but require significantly more resources. The Transformer’s efficiency allows it to scale effectively on standard hardware, making it accessible for research and deployment in various NLP applications."
+  },
+  {
+    "id": "mucuna_32_fodder_quality",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 55,
+    "section_heading": "Fodder quality analysis",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 7,
+    "attributes": [
+      "Fodder quality",
+      "Nutritional analysis"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Velvet bean fodder is valued for its high nutritional quality, with crude protein levels of 15–18% in foliage and 20–26% in seeds. Its high digestibility makes it an excellent supplement for ruminants, improving weight gain and milk yield. Silage made from intercropped mucuna and maize retains high nitrogen content, enhancing feed value. Laboratory analysis shows low levels of anti-nutritional factors in properly processed fodder, making it safe for livestock. Regular quality testing ensures consistent nutritional benefits for farmers in tropical regions."
+  },
+  {
+    "id": "transformer_24_attention_visualization",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 56,
+    "section_heading": "17 Attention Visualization",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 21,
+    "attributes": [
+      "Attention visualization",
+      "Interpretability"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Visualizing the Transformer’s attention weights provides insights into its decision-making process. Attention heatmaps show that the model focuses on relevant words in the input sequence when generating translations, capturing syntactic and semantic relationships. For example, in English-to-German translation, attention aligns pronouns with their antecedents across long distances. Multi-head attention allows the model to attend to different aspects of the input simultaneously, enhancing interpretability. These visualizations confirm the Transformer’s ability to model complex dependencies effectively."
+  },
+  {
+    "id": "mucuna_33_pest_monitoring",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 57,
+    "section_heading": "Pest monitoring strategies",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 5,
+    "attributes": [
+      "Pest monitoring",
+      "Integrated pest management"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Monitoring pests in velvet bean crops is essential for maintaining yield. Farmers should conduct weekly scouting to detect early signs of infestation, such as leaf damage from caterpillars. Integrated pest management (IPM) combines natural defenses, like mucuna’s L-DOPA content, with targeted interventions. Sticky traps and pheromone lures can monitor pest populations. If outbreaks occur, biopesticides are preferred to maintain soil health. Extension officers can provide region-specific IPM strategies, ensuring minimal chemical use and sustainable pest control in tropical farming systems."
+  },
+  {
+    "id": "transformer_25_future_directions",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 58,
+    "section_heading": "18 Future Directions in Transformer Research",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 20,
+    "attributes": [
+      "Future directions",
+      "Model improvements"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "Future research on the Transformer aims to address its limitations, such as high memory usage for long sequences. Techniques like sparse attention and adaptive computation time are being explored to improve efficiency. Extending the Transformer to multimodal tasks, such as combining text and images, is another promising direction. Additionally, optimizing the model for low-resource devices could broaden its accessibility. These advancements aim to enhance the Transformer’s scalability, efficiency, and applicability across diverse domains."
+  },
+  {
+    "id": "mucuna_34_soil_testing",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 59,
+    "section_heading": "Soil testing for mucuna",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 6,
+    "attributes": [
+      "Soil testing",
+      "Nutrient management"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Soil testing before planting velvet bean ensures optimal nutrient management. Tests should measure phosphorus, nitrogen, and pH levels to guide fertilizer and lime applications. Mucuna thrives in soils with low phosphorus, but applying 200–250 kg/ha of superphosphate boosts yields. A pH of 5.5–6.5 supports nodulation and nitrogen fixation. Farmers can use portable soil testing kits or send samples to local agricultural labs. Regular testing, ideally annually, helps tailor inputs, reducing costs and maximizing mucuna’s benefits for soil fertility and crop productivity."
+  },
+  {
+    "id": "transformer_26_computational_cost",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 60,
+    "section_heading": "19 Computational Cost Analysis",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 19,
+    "attributes": [
+      "Computational cost",
+      "Efficiency"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer’s computational cost is lower than that of recurrent models due to its parallelizable architecture. For the WMT 2014 English-to-German task, training requires approximately 100,000 GPU hours, compared to 500,000 for RNN-based models. The attention mechanism’s constant-time complexity for dependency modeling reduces the number of operations compared to convolutional models like ConvS2S. However, memory usage scales with sequence length, posing challenges for long sequences. Optimizations like gradient checkpointing can further reduce costs, making the Transformer viable for large-scale deployment."
+  },
+  {
+    "id": "mucuna_35_seed_production",
+    "source_doc_id": "extension_brief_mucuna.pdf",
+    "chunk_index": 61,
+    "section_heading": "Optimizing seed production",
+    "journal": "ILRI extension brief",
+    "publish_year": 2016,
+    "usage_count": 4,
+    "attributes": [
+      "Seed production",
+      "Yield optimization"
+    ],
+    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
+    "text": "Optimizing velvet bean seed production involves selecting high-yielding varieties and proper management. Planting at a lower seed rate (30–35 kg/ha) in semi-arid areas reduces competition, increasing seed yield. Adequate phosphorus and lime applications enhance pod formation. Harvesting pods when fully dry (May–June) ensures high seed quality. Manual threshing and winnowing produce clean seeds with minimal damage. Farmers can achieve up to 2 t/ha of clean seed, which can be sold or stored for future planting, supporting income generation and self-sufficiency."
+  },
+  {
+    "id": "transformer_27_transfer_learning",
+    "source_doc_id": "1706.03762v7.pdf",
+    "chunk_index": 62,
+    "section_heading": "20 Transfer Learning with Transformer",
+    "doi": "10.48550/arXiv.1706.03762",
+    "journal": "arXiv preprint",
+    "publish_year": 2017,
+    "usage_count": 18,
+    "attributes": [
+      "Transfer learning",
+      "Pre-training"
+    ],
+    "link": "https://arxiv.org/pdf/1706.03762",
+    "text": "The Transformer supports transfer learning by pre-training on large datasets and fine-tuning on specific tasks. Pre-training on the WMT 2014 datasets enables the model to learn robust representations, which are then fine-tuned for tasks like parsing or summarization. This approach improves performance on low-resource tasks, where training data is limited. The model’s attention-based architecture facilitates effective transfer, as it captures general linguistic patterns. Transfer learning with the Transformer has inspired subsequent models like BERT, which leverage pre-training for diverse NLP applications."
+  }]

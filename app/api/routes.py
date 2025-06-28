@@ -1,17 +1,16 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from app.tasks.background_tasks import celery_app, query_embeddings
+from app.tasks.background_tasks import celery_app, semantic_search
 
 router = APIRouter()
 
-class EmbeddingRequest(BaseModel):
-    x: str
-    y: str
+class QueryRequest(BaseModel):
+    query: str
 
 @router.post("/similarity_search")
-async def get_predicted_names_vector(request: EmbeddingRequest):
+async def get_embeddings(request: QueryRequest):
     try:
-        job = query_embeddings.delay(request.x, request.y)
+        job = semantic_search.delay(request.query)
         return {"job_id": job.id}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -21,6 +20,7 @@ async def get_predicted_names_vector(request: EmbeddingRequest):
 async def get_job_results(job_id: str):
     try:
         result = celery_app.AsyncResult(job_id)
+
         if result.successful():
             return {
                 "status": "completed",
@@ -34,6 +34,9 @@ async def get_job_results(job_id: str):
                 "error": str(result.info),
             }
         else:
-            return {"status": f"Task {job_id} not completed yet", "state": result.state}
+            return {
+                "status": f"Task {job_id} not completed yet",
+                "state": result.state,
+            }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
