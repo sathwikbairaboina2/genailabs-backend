@@ -958,4 +958,455 @@
     ],
     "link": "https://arxiv.org/pdf/1706.03762",
     "text": "The Transformer supports transfer learning by pre-training on large datasets and fine-tuning on specific tasks. Pre-training on the WMT 2014 datasets enables the model to learn robust representations, which are then fine-tuned for tasks like parsing or summarization. This approach improves performance on low-resource tasks, where training data is limited. The model’s attention-based architecture facilitates effective transfer, as it captures general linguistic patterns. Transfer learning with the Transformer has inspired subsequent models like BERT, which leverage pre-training for diverse NLP applications."
-  }]
+  },
+  {
+    "source_doc_id": "covid_vaccine_study_2021.pdf",
+    "journal": "New England Journal of Medicine",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2035389",
+    "publish_year": 2021,
+    "usage_count": 50,
+    "id": "health_1",
+    "chunk_index": 1,
+    "section_heading": "mRNA Vaccine Development",
+    "attributes": [
+      "mRNA",
+      "Vaccines"
+    ],
+    "text": "mRNA vaccines were developed rapidly in response to the pandemic."
+  },
+  {
+    "source_doc_id": "covid_vaccine_study_2021.pdf",
+    "journal": "New England Journal of Medicine",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2035389",
+    "publish_year": 2021,
+    "usage_count": 47,
+    "id": "health_2",
+    "chunk_index": 2,
+    "section_heading": "Public Immunity Responses",
+    "attributes": [
+      "Immunity",
+      "COVID-19"
+    ],
+    "text": "Immunity is influenced by both B-cell and T-cell responses."
+  },
+  {
+    "source_doc_id": "covid_vaccine_study_2021.pdf",
+    "journal": "New England Journal of Medicine",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2035389",
+    "publish_year": 2021,
+    "usage_count": 44,
+    "id": "health_3",
+    "chunk_index": 3,
+    "section_heading": "Side Effects",
+    "attributes": [
+      "Adverse effects",
+      "Safety"
+    ],
+    "text": "Most adverse reactions were mild and self-resolving."
+  },
+  {
+    "source_doc_id": "covid_vaccine_study_2021.pdf",
+    "journal": "New England Journal of Medicine",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2035389",
+    "publish_year": 2021,
+    "usage_count": 41,
+    "id": "health_4",
+    "chunk_index": 4,
+    "section_heading": "Pediatric Studies",
+    "attributes": [
+      "Children",
+      "Clinical Trials"
+    ],
+    "text": "Children showed strong immune responses with lower doses."
+  },
+  {
+    "source_doc_id": "covid_vaccine_study_2021.pdf",
+    "journal": "New England Journal of Medicine",
+    "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa2035389",
+    "publish_year": 2021,
+    "usage_count": 38,
+    "id": "health_5",
+    "chunk_index": 5,
+    "section_heading": "Vaccine Storage Logistics",
+    "attributes": [
+      "Cold chain",
+      "Logistics"
+    ],
+    "text": "Distribution requires ultra-cold storage solutions."
+  },
+  {
+    "source_doc_id": "ipcc_ar6_summary.pdf",
+    "journal": "IPCC AR6 Report",
+    "link": "https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf",
+    "publish_year": 2021,
+    "usage_count": 50,
+    "id": "climate_1",
+    "chunk_index": 1,
+    "section_heading": "Rising Global Temperatures",
+    "attributes": [
+      "Temperature",
+      "Warming"
+    ],
+    "text": "Earth\u2019s temperature continues to rise at unprecedented rates."
+  },
+  {
+    "source_doc_id": "ipcc_ar6_summary.pdf",
+    "journal": "IPCC AR6 Report",
+    "link": "https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf",
+    "publish_year": 2021,
+    "usage_count": 47,
+    "id": "climate_2",
+    "chunk_index": 2,
+    "section_heading": "Sea-Level Projections",
+    "attributes": [
+      "Sea level",
+      "Glaciers"
+    ],
+    "text": "Sea levels could rise by 1 meter by 2100."
+  },
+  {
+    "source_doc_id": "ipcc_ar6_summary.pdf",
+    "journal": "IPCC AR6 Report",
+    "link": "https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf",
+    "publish_year": 2021,
+    "usage_count": 44,
+    "id": "climate_3",
+    "chunk_index": 3,
+    "section_heading": "Greenhouse Gas Emissions",
+    "attributes": [
+      "CO2",
+      "Methane"
+    ],
+    "text": "CO2 is the largest contributor to anthropogenic greenhouse gases."
+  },
+  {
+    "source_doc_id": "ipcc_ar6_summary.pdf",
+    "journal": "IPCC AR6 Report",
+    "link": "https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf",
+    "publish_year": 2021,
+    "usage_count": 41,
+    "id": "climate_4",
+    "chunk_index": 4,
+    "section_heading": "Climate Mitigation Strategies",
+    "attributes": [
+      "Mitigation",
+      "Policy"
+    ],
+    "text": "Policy changes and clean tech are key mitigation approaches."
+  },
+  {
+    "source_doc_id": "ipcc_ar6_summary.pdf",
+    "journal": "IPCC AR6 Report",
+    "link": "https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf",
+    "publish_year": 2021,
+    "usage_count": 38,
+    "id": "climate_5",
+    "chunk_index": 5,
+    "section_heading": "Regional Climate Models",
+    "attributes": [
+      "Models",
+      "Forecasting"
+    ],
+    "text": "Regional models help predict localized climate impacts."
+  },
+  {
+    "source_doc_id": "ubi_oxford_study.pdf",
+    "journal": "Oxford Economic Papers",
+    "link": "https://academic.oup.com/oep/article/71/1/1/5732143",
+    "publish_year": 2021,
+    "usage_count": 50,
+    "id": "econ_1",
+    "chunk_index": 1,
+    "section_heading": "Income Redistribution",
+    "attributes": [
+      "Redistribution",
+      "Income equality"
+    ],
+    "text": "Redistribution policies can narrow the income gap."
+  },
+  {
+    "source_doc_id": "ubi_oxford_study.pdf",
+    "journal": "Oxford Economic Papers",
+    "link": "https://academic.oup.com/oep/article/71/1/1/5732143",
+    "publish_year": 2021,
+    "usage_count": 47,
+    "id": "econ_2",
+    "chunk_index": 2,
+    "section_heading": "Employment Trends",
+    "attributes": [
+      "Jobs",
+      "Labor"
+    ],
+    "text": "Automation affects low-skill job markets the most."
+  },
+  {
+    "source_doc_id": "ubi_oxford_study.pdf",
+    "journal": "Oxford Economic Papers",
+    "link": "https://academic.oup.com/oep/article/71/1/1/5732143",
+    "publish_year": 2021,
+    "usage_count": 44,
+    "id": "econ_3",
+    "chunk_index": 3,
+    "section_heading": "Welfare Programs",
+    "attributes": [
+      "Welfare",
+      "Government"
+    ],
+    "text": "Conditional cash transfers improve nutrition and schooling."
+  },
+  {
+    "source_doc_id": "ubi_oxford_study.pdf",
+    "journal": "Oxford Economic Papers",
+    "link": "https://academic.oup.com/oep/article/71/1/1/5732143",
+    "publish_year": 2021,
+    "usage_count": 41,
+    "id": "econ_4",
+    "chunk_index": 4,
+    "section_heading": "Taxation Policies",
+    "attributes": [
+      "Tax",
+      "Policy"
+    ],
+    "text": "Progressive taxation supports public services."
+  },
+  {
+    "source_doc_id": "ubi_oxford_study.pdf",
+    "journal": "Oxford Economic Papers",
+    "link": "https://academic.oup.com/oep/article/71/1/1/5732143",
+    "publish_year": 2021,
+    "usage_count": 38,
+    "id": "econ_5",
+    "chunk_index": 5,
+    "section_heading": "Universal Basic Income Effects",
+    "attributes": [
+      "UBI",
+      "Pilot"
+    ],
+    "text": "UBI has mixed effects on labor supply and happiness."
+  },
+  {
+    "source_doc_id": "pollinator_report_2020.pdf",
+    "journal": "Global Ecology Letters",
+    "link": "https://www.ecologyletters.com/pdf/pollinators2020.pdf",
+    "publish_year": 2021,
+    "usage_count": 50,
+    "id": "eco_1",
+    "chunk_index": 1,
+    "section_heading": "Pollinator Habitat Loss",
+    "attributes": [
+      "Pollinators",
+      "Habitat"
+    ],
+    "text": "Habitat fragmentation is a leading threat to pollinators."
+  },
+  {
+    "source_doc_id": "pollinator_report_2020.pdf",
+    "journal": "Global Ecology Letters",
+    "link": "https://www.ecologyletters.com/pdf/pollinators2020.pdf",
+    "publish_year": 2021,
+    "usage_count": 47,
+    "id": "eco_2",
+    "chunk_index": 2,
+    "section_heading": "Invasive Species Impact",
+    "attributes": [
+      "Invasive",
+      "Species"
+    ],
+    "text": "Invasive species disrupt native ecological balance."
+  },
+  {
+    "source_doc_id": "pollinator_report_2020.pdf",
+    "journal": "Global Ecology Letters",
+    "link": "https://www.ecologyletters.com/pdf/pollinators2020.pdf",
+    "publish_year": 2021,
+    "usage_count": 44,
+    "id": "eco_3",
+    "chunk_index": 3,
+    "section_heading": "Biodiversity Hotspots",
+    "attributes": [
+      "Hotspots",
+      "Diversity"
+    ],
+    "text": "Hotspots host over 50% of world biodiversity."
+  },
+  {
+    "source_doc_id": "pollinator_report_2020.pdf",
+    "journal": "Global Ecology Letters",
+    "link": "https://www.ecologyletters.com/pdf/pollinators2020.pdf",
+    "publish_year": 2021,
+    "usage_count": 41,
+    "id": "eco_4",
+    "chunk_index": 4,
+    "section_heading": "Reforestation Efforts",
+    "attributes": [
+      "Forests",
+      "Carbon"
+    ],
+    "text": "Reforestation can help sequester carbon effectively."
+  },
+  {
+    "source_doc_id": "pollinator_report_2020.pdf",
+    "journal": "Global Ecology Letters",
+    "link": "https://www.ecologyletters.com/pdf/pollinators2020.pdf",
+    "publish_year": 2021,
+    "usage_count": 38,
+    "id": "eco_5",
+    "chunk_index": 5,
+    "section_heading": "Endangered Species Recovery",
+    "attributes": [
+      "Recovery",
+      "Conservation"
+    ],
+    "text": "Recovery efforts have saved several species from extinction."
+  },
+  {
+    "source_doc_id": "ai_education_tools.pdf",
+    "journal": "Journal of Learning Analytics",
+    "link": "https://learning-analytics.info/pdf/ai_tutors2023.pdf",
+    "publish_year": 2021,
+    "usage_count": 50,
+    "id": "edu_1",
+    "chunk_index": 1,
+    "section_heading": "AI-Powered Learning Systems",
+    "attributes": [
+      "AI",
+      "Tutoring"
+    ],
+    "text": "AI tutors adjust lessons based on learner input."
+  },
+  {
+    "source_doc_id": "ai_education_tools.pdf",
+    "journal": "Journal of Learning Analytics",
+    "link": "https://learning-analytics.info/pdf/ai_tutors2023.pdf",
+    "publish_year": 2021,
+    "usage_count": 47,
+    "id": "edu_2",
+    "chunk_index": 2,
+    "section_heading": "Student Engagement Analytics",
+    "attributes": [
+      "Analytics",
+      "Engagement"
+    ],
+    "text": "Analytics help identify at-risk students early."
+  },
+  {
+    "source_doc_id": "ai_education_tools.pdf",
+    "journal": "Journal of Learning Analytics",
+    "link": "https://learning-analytics.info/pdf/ai_tutors2023.pdf",
+    "publish_year": 2021,
+    "usage_count": 44,
+    "id": "edu_3",
+    "chunk_index": 3,
+    "section_heading": "Online Learning Outcomes",
+    "attributes": [
+      "Online",
+      "Assessment"
+    ],
+    "text": "Online learning shows mixed long-term results."
+  },
+  {
+    "source_doc_id": "ai_education_tools.pdf",
+    "journal": "Journal of Learning Analytics",
+    "link": "https://learning-analytics.info/pdf/ai_tutors2023.pdf",
+    "publish_year": 2021,
+    "usage_count": 41,
+    "id": "edu_4",
+    "chunk_index": 4,
+    "section_heading": "STEM Education Innovation",
+    "attributes": [
+      "STEM",
+      "Innovation"
+    ],
+    "text": "STEM programs boost skills in underserved communities."
+  },
+  {
+    "source_doc_id": "ai_education_tools.pdf",
+    "journal": "Journal of Learning Analytics",
+    "link": "https://learning-analytics.info/pdf/ai_tutors2023.pdf",
+    "publish_year": 2021,
+    "usage_count": 38,
+    "id": "edu_5",
+    "chunk_index": 5,
+    "section_heading": "Adaptive Curriculum Design",
+    "attributes": [
+      "Curriculum",
+      "Adaptive"
+    ],
+    "text": "Adaptive systems personalize learning at scale."
+  },
+  {
+    "source_doc_id": "quantum_materials_2022.pdf",
+    "journal": "Nature Physics",
+    "link": "https://www.nature.com/articles/s41567-022-01476-y",
+    "publish_year": 2021,
+    "usage_count": 50,
+    "id": "phys_1",
+    "chunk_index": 1,
+    "section_heading": "Quantum Entanglement",
+    "attributes": [
+      "Quantum",
+      "Entanglement"
+    ],
+    "text": "Quantum entanglement enables secure communication."
+  },
+  {
+    "source_doc_id": "quantum_materials_2022.pdf",
+    "journal": "Nature Physics",
+    "link": "https://www.nature.com/articles/s41567-022-01476-y",
+    "publish_year": 2021,
+    "usage_count": 47,
+    "id": "phys_2",
+    "chunk_index": 2,
+    "section_heading": "Graphene Properties",
+    "attributes": [
+      "Graphene",
+      "Materials"
+    ],
+    "text": "Graphene exhibits exceptional strength and conductivity."
+  },
+  {
+    "source_doc_id": "quantum_materials_2022.pdf",
+    "journal": "Nature Physics",
+    "link": "https://www.nature.com/articles/s41567-022-01476-y",
+    "publish_year": 2021,
+    "usage_count": 44,
+    "id": "phys_3",
+    "chunk_index": 3,
+    "section_heading": "Superconductivity",
+    "attributes": [
+      "Superconductors",
+      "Zero resistance"
+    ],
+    "text": "Superconductors conduct electricity without resistance."
+  },
+  {
+    "source_doc_id": "quantum_materials_2022.pdf",
+    "journal": "Nature Physics",
+    "link": "https://www.nature.com/articles/s41567-022-01476-y",
+    "publish_year": 2021,
+    "usage_count": 41,
+    "id": "phys_4",
+    "chunk_index": 4,
+    "section_heading": "Spintronics Applications",
+    "attributes": [
+      "Spin",
+      "Electronics"
+    ],
+    "text": "Spintronics could revolutionize data storage."
+  },
+  {
+    "source_doc_id": "quantum_materials_2022.pdf",
+    "journal": "Nature Physics",
+    "link": "https://www.nature.com/articles/s41567-022-01476-y",
+    "publish_year": 2021,
+    "usage_count": 38,
+    "id": "phys_5",
+    "chunk_index": 5,
+    "section_heading": "Topological Materials",
+    "attributes": [
+      "Topology",
+      "Insulators"
+    ],
+    "text": "Topological insulators show promise in quantum computing."
+  }
+]
