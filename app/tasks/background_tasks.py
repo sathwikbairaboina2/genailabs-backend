@@ -1,26 +1,22 @@
+import json
 import os
-
 from celery import Celery, signals
-
-from app.core.logging import get_logger
+import faiss
+import pandas as pd
+import numpy as np
 from sentence_transformers import SentenceTransformer
-logger = get_logger(__name__)
-
-
-broker_url = os.environ.get("CELERY_BROKER_URL", "redis://localhost:6379")
-result_backend = os.environ.get("CELERY_RESULT_BACKEND", "redis://localhost:6379")
-
-celery_app = Celery("worker", broker=broker_url, backend=result_backend)
-
 
 model = None
 index = None
 raw_df = None
 
+broker_url = os.environ.get("CELERY_BROKER_URL", "redis://localhost:6379")
+result_backend = os.environ.get("CELERY_RESULT_BACKEND", "redis://localhost:6379")
+
+celery_app = Celery("worker", backend=result_backend, broker=broker_url)
+
 @signals.worker_process_init.connect
-def on_worker_start(**kwargs):
-    logger.info("Celery worker has started and is ready.")
-    def setup_model(**kwargs):
+def setup_model(**kwargs):
     global model, index, raw_df
 
     model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -42,12 +38,14 @@ def on_worker_start(**kwargs):
     index = faiss.IndexFlatL2(dim)
     index.add(np.array(embeddings).astype("float32"))
 
-@celery_app.task(name="addembeddings")
-def update_embeddings(x, y):
-    """Add embeddings to the database."""
-    logger.info("Celery task triggered.")
-    return "success"
 @celery_app.task
-def query_embeddings(x, y):
-    logger.info("celry task triggered")
-    return "sucess"
+def semantic_search(query: str, top_k: int = 3):
+    global model, index, raw_df
+
+    query_vec = model.encode([query], convert_to_numpy=True).astype("float32")
+    distances, indices = index.search(query_vec, top_k)
+
+    results = raw_df.iloc[indices[0]].copy()
+    results["similarity_score"] = 1 / (1 + distances[0])
+
+    return results.drop(columns=["combined_text"]).to_dict(orient="records")
