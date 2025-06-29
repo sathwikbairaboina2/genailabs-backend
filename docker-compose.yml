@@ -49,6 +49,19 @@ services:
       - qdrant_data:/qdrant/storage
     restart: unless-stopped
 
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    restart: unless-stopped
+
 volumes:
   redis_data:
   qdrant_data:
+  mongodb_data:
