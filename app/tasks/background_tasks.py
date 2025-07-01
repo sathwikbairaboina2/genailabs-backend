@@ -139,10 +139,11 @@ def update_vector_embeddings(records: List[Dict[str, Any]]) -> Dict[str, List[st
             # Embed vector
             try:
                 vector = vector_store._build_vectors([text])[0]
+                point_metadata = record.pop("text", "")
                 point = {
                     "id": id,
                     "vector": vector,
-                    "payload": record,
+                    "payload": {**point_metadata, "page_content": text},
                 }
                 points.append(point)
                 succeeded_ids.append(id)
