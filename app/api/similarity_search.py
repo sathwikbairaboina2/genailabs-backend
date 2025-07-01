@@ -14,7 +14,6 @@ class QueryRequest(BaseModel):
 @router.post("/")
 async def start_similarity_search(request: QueryRequest):
     try:
-
         return await start_search_handler(request)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

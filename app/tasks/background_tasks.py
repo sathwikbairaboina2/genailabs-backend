@@ -139,11 +139,19 @@ def update_vector_embeddings(records: List[Dict[str, Any]]) -> Dict[str, List[st
             # Embed vector
             try:
                 vector = vector_store._build_vectors([text])[0]
-                point_metadata = record.pop("text", "")
                 point = {
                     "id": id,
                     "vector": vector,
-                    "payload": {**point_metadata, "page_content": text},
+                    "payload": {
+                        "page_content": text,
+                        "source_doc_id": record.get("source_doc_id"),
+                        "publish_year": record.get("publish_year"),
+                        "field": record.get("field"),
+                        "chunk_index": record.get("chunk_index"),
+                        "section_heading": record.get("section_heading"),
+                        "attributes": record.get("attributes"),
+                        "link": record.get("link"),
+                    },
                 }
                 points.append(point)
                 succeeded_ids.append(id)
@@ -153,10 +161,6 @@ def update_vector_embeddings(records: List[Dict[str, Any]]) -> Dict[str, List[st
 
         if points:
             result = client.upsert(collection_name=collection_name, points=points)
-            items = client.getall(
-                collection_name=collection_name, ids=[p["id"] for p in points]
-            )
-            logger.info(f"Items after upsert: {items}")
 
             logger.info(f"Upsert result: {result}")
         else:

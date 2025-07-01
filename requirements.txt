@@ -13,3 +13,5 @@ fastembed-gpu
 pandas
 pymongo==4.6.1
 python-multipart
+langchain_anthropic
+langgraph
