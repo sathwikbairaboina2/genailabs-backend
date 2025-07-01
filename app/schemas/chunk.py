@@ -3,7 +3,7 @@ from typing import List
 
 
 class Chunk(BaseModel):
-    _id: str
+    id: str
     journal: str
     chunk_index: int
     section_heading: str
@@ -12,5 +12,3 @@ class Chunk(BaseModel):
     link: str
     text: str
     source_doc_id: str
-    journal_id: str
-    chunk_id: str

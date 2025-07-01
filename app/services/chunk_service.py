@@ -1,4 +1,7 @@
 from typing import List
+
+from bson import ObjectId
+from app.core.logging import get_logger
 from app.core.mongodb import get_db
 from app.modals.chunk import Chunk
 from app.utils.helpers import build_bulk_write_response, handle_bulk_write_error
@@ -9,6 +12,8 @@ from pymongo.errors import BulkWriteError
 
 db = get_db()
 chunk_collection: Collection = db.chunks
+
+logger = get_logger(__name__)
 
 
 def update_usage_count(chunk_id: str, increment: int = 1):
@@ -27,20 +32,38 @@ def update_usage_count(chunk_id: str, increment: int = 1):
         )
 
 
-def get_chunks_by_ids(chunk_ids: List[str]) -> List[Chunk]:
+def get_chunks_by_journal(journal_id: str):
     try:
-        docs = chunk_collection.find({"_id": {"$in": chunk_ids}})
-        return [Chunk(**doc) for doc in docs]
+        cursor = chunk_collection.find({"journal_id": journal_id})
+        chunks = list(cursor)  # Convert cursor to list of documents (dicts)
+        logger.info(
+            f"Fetching chunks for journal {journal_id}, Found: {len(chunks)} chunks"
+        )
+        return chunks
     except Exception as e:
+        logger.error(f"Failed to fetch chunks: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to fetch chunks: {str(e)}")
 
 
-def add_chunks(chunks: List[Chunk]) -> dict:
+def add_chunks(chunks: List[dict], journal_id: str) -> dict:
     try:
-        docs = [chunk.dict(by_alias=True) for chunk in chunks]
+        docs = []
+
+        for chunk_data in chunks:
+            if "id" in chunk_data:
+                chunk_data["chunk_id"] = chunk_data.pop("id")
+
+            chunk_data["journal_id"] = journal_id
+            chunk = Chunk(**chunk_data)
+            docs.append(chunk.dict())
+
         result = chunk_collection.insert_many(docs, ordered=False)
         return build_bulk_write_response(result.inserted_ids, 0)
+
     except BulkWriteError as e:
-        return handle_bulk_write_error(e, chunks)
+        return handle_bulk_write_error(e, docs)
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Insertion failed: {str(e)}")
+        raise HTTPException(
+            status_code=500, detail=f"chunks insertion failed: {str(e)}"
+        )

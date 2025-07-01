@@ -8,9 +8,11 @@ from pymongo.collection import Collection
 
 logger = get_logger(__name__)
 
+
 client = MongoClient(settings.MONGO_URI)
 db = client[settings.MONGO_DB_NAME]
 chunk_collection: Collection = db.chunks
+journal_collection: Collection = db.journals
 
 
 def get_db():
@@ -20,6 +22,8 @@ def get_db():
 def create_chunk_indexes():
     chunk_collection.create_index([("journal", ASCENDING)])
     chunk_collection.create_index([("usage_count", DESCENDING)])
+    journal_collection.create_index([("journal_id", ASCENDING)])
+    chunk_collection.create_index([("chunk_id", ASCENDING)])
 
 
 def test_mongo_connection():

@@ -1,18 +1,31 @@
 import os
 import json
+import uuid
 import pandas as pd
 from typing import List, Dict, Optional, Any
 from celery import Celery, signals
-from sentence_transformers import SentenceTransformer
 from langchain.docstore.document import Document
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_qdrant import QdrantVectorStore, RetrievalMode, FastEmbedSparse
 from qdrant_client.http.models import Filter, FieldCondition, MatchValue, Range
-from qdrant_client.http.exceptions import UnexpectedResponse
 
-broker_url = os.getenv("CELERY_BROKER_URL", "redis://redis:6379")
-result_backend = os.getenv("CELERY_RESULT_BACKEND", "redis://redis:6379")
-qdrant_host = os.getenv("QDRANT_HOST", "http://qdrant:6333")
+
+def is_valid_uuid(val: str) -> bool:
+    try:
+        uuid.UUID(str(val))
+        return True
+    except (ValueError, TypeError):
+        return False
+
+
+from app.core.logging import get_logger
+
+logger = get_logger(__name__)
+
+broker_url = os.environ.get("CELERY_BROKER_URL", "redis://localhost:6379")
+result_backend = os.environ.get("CELERY_RESULT_BACKEND", "redis://localhost:6379")
+qdrant_host = os.environ.get("QDRANT_HOST", "http://localhost:6333")
+
 
 celery_app = Celery("worker", backend=result_backend, broker=broker_url)
 
@@ -21,7 +34,7 @@ vector_store = None
 
 
 @signals.worker_process_init.connect
-def init_vector_store(**_):
+def setup_vector_store(**kwargs):
     global vector_store
 
     try:
@@ -54,8 +67,7 @@ def init_vector_store(**_):
         raise RuntimeError(f"Failed to initialize vector store: {e}")
 
 
-@celery_app.task
-def semantic_search(
+def semantic_search_with_filters(
     query: str,
     top_k: int = 5,
     min_score: float = 0.5,
@@ -81,6 +93,8 @@ def semantic_search(
             query, k=top_k, filter=qdrant_filter
         )
 
+        logger.info(f"Semantic search results: {results}")
+
         return [
             {
                 "similarity_score": round(score, 4),
@@ -95,66 +109,60 @@ def semantic_search(
 
 
 @celery_app.task
-def update_vector_embeddings(records: List[Dict[str, Any]]) -> str:
+def semantic_search(
+    query: str,
+    top_k: int = 5,
+    min_score: float = 0.5,
+):
+    return semantic_search_with_filters(query, top_k, min_score)
+
+
+@celery_app.task
+def update_vector_embeddings(records: List[Dict[str, Any]]) -> Dict[str, List[str]]:
     global vector_store
 
     collection_name = "my_collection"
-    client = vector_store._client
+    client = vector_store.client
+    succeeded_ids = []
+    failed_ids = []
+    points = []
 
     try:
-        """Get existing document IDs"""
-        existing_ids = set()
-        offset = None
-        while True:
-            points, next_offset = client.scroll(
-                collection_name=collection_name,
-                offset=offset,
-                limit=1000,
-                with_payload=True,
-                with_vectors=False,
-            )
-            if not points:
-                break
-            for point in points:
-                doc_id = point.payload.get("source_doc_id")
-                if doc_id:
-                    existing_ids.add(doc_id)
-            if next_offset is None:
-                break
-            offset = next_offset
-
-        # filter and prepare docs
-        new_docs = []
-        docs_to_delete = []
         for record in records:
-            doc_id = record.get("source_doc_id")
-            if not doc_id or "text" not in record:
+            id = record.get("id")
+            text = record.get("text")
+
+            if not id or not text or not is_valid_uuid(id):
+                failed_ids.append(id or "MISSING_ID")
                 continue
-            new_docs.append(
-                Document(
-                    page_content=record["text"],
-                    metadata={k: v for k, v in record.items() if k != "text"},
-                )
-            )
-            if doc_id in existing_ids:
-                docs_to_delete.append(doc_id)
 
-        # delete existing docs
-        if docs_to_delete:
+            # Embed vector
             try:
-                client.delete(
-                    collection_name=collection_name,
-                    points_selector={"points": docs_to_delete},
-                )
-            except UnexpectedResponse as ue:
-                raise RuntimeError(f"Qdrant deletion failed: {ue}")
+                vector = vector_store._build_vectors([text])[0]
+                point = {
+                    "id": id,
+                    "vector": vector,
+                    "payload": record,
+                }
+                points.append(point)
+                succeeded_ids.append(id)
+            except Exception as embed_err:
+                logger.error(f"Failed embedding for id={id}: {embed_err}")
+                failed_ids.append(id)
 
-        #
-        if new_docs:
-            vector_store.add_documents(new_docs)
-            return f"Upserted {len(new_docs)} documents ({len(docs_to_delete)} replaced, {len(new_docs) - len(docs_to_delete)} new)."
+        if points:
+            result = client.upsert(collection_name=collection_name, points=points)
+            items = client.getall(
+                collection_name=collection_name, ids=[p["id"] for p in points]
+            )
+            logger.info(f"Items after upsert: {items}")
 
-        return "No documents upserted."
+            logger.info(f"Upsert result: {result}")
+        else:
+            logger.info("No valid documents to upsert.")
+
+        return {"succeeded_ids": succeeded_ids, "failed_ids": failed_ids}
 
     except Exception as e:
-        raise RuntimeError(f"Vector embedding update failed: {str(e)}")
+        logger.error(f"Exception during vector embedding update: {e}")
+        raise RuntimeError(f"Failed to update vector embeddings: {e}")

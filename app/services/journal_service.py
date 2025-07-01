@@ -13,7 +13,9 @@ journals_collection: Collection = db.journals
 
 def add_journal(journal: Journal):
     try:
-        return journals_collection.insert_one(journal)
+        journal_dict = journal.dict()
+        logger.info
+        return journals_collection.insert_one(journal_dict)
     except DuplicateKeyError:
         logger.warning(f"Journal with id {journal['_id']} already exists.")
         raise HTTPException(status_code=409, detail="Journal already exists.")
@@ -25,7 +27,8 @@ def add_journal(journal: Journal):
 def get_journal_by_id(journal_id: str):
 
     try:
-        journal = journals_collection.find_one({"_id": journal_id})
+        journal = journals_collection.find_one({"journal_id": journal_id})
+        logger.info(f"Fetchinjournal_id {journal}")
         if not journal:
             raise HTTPException(status_code=404, detail="Journal not found.")
         return journal
@@ -34,18 +37,19 @@ def get_journal_by_id(journal_id: str):
         raise HTTPException(status_code=500, detail="Internal DB error.")
 
 
-def update_journal_status(journal_id: str, status: dict):
+def update_journal_status(journal_id: str, status: str, result: dict = None):
 
     try:
-        update_fields = {"status": status}
-        update_query = {"$set": update_fields}
-
-        result = journals_collection.update_one({"_id": journal_id}, update_query)
-
-        if result.matched_count == 0:
+        logger.info(f"Updating journal {journal_id} with status: {status}")
+        db_result = journals_collection.update_one(
+            {"journal_id": journal_id}, {"$set": {"status": status}}
+        )
+        if db_result.matched_count == 0:
             raise HTTPException(status_code=404, detail="Journal not found.")
+        logger.info(f"Updated jrnl {journal_id}  {db_result}")
 
-        return result
+        return get_journal_by_id(journal_id)
+
     except PyMongoError as e:
         logger.error(f"Failed to update journal {journal_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal DB error.")

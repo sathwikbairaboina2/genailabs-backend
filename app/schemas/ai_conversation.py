@@ -4,7 +4,6 @@ from datetime import datetime
 
 
 class AIConversation(BaseModel):
-    id: str = Field(default_factory=str, alias="_id")
     user_query: str
     ai_answer: str
     refered_chunk_ids: List[str]
@@ -12,3 +11,5 @@ class AIConversation(BaseModel):
     created_at: datetime = Field(default_factory=datetime.utcnow)
     citation: str
     source_doc_ids: List[str]
+    celery_job_id: str
+    status: str
