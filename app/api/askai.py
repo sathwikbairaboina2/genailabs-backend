@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from app.assistant.assistant import ask_genailabs_ai
+from app.handlers.similarity_query import get_search_results
 
 router = APIRouter()
 

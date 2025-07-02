@@ -173,7 +173,6 @@ def update_vector_embeddings(records: List[Dict[str, Any]]) -> Dict[str, List[st
         raise RuntimeError(f"Failed to update vector embeddings: {e}")
 
 
-@celery_app.task
 def search_vectorstore_by_metadata(doc_ids: List[str]):
     global vector_store
     client = vector_store.client
