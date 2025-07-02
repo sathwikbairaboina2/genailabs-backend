@@ -39,10 +39,10 @@ def update_query_log(job_id: str, status: dict, chunk_ids: List[str]):
         update_fields = {"status": status, "chunk_ids": chunk_ids}
         update_query = {"$set": update_fields}
 
-        # result = query_logs_collection.update_one({"_id": job_id}, update_query)
+        result = query_logs_collection.update_one({"_id": job_id}, update_query)
 
-        # if result.matched_count == 0:
-        #     raise HTTPException(status_code=404, detail="Journal not found.")
+        if result.matched_count == 0:
+            raise HTTPException(status_code=404, detail="Journal not found.")
 
         return "result"
     except PyMongoError as e:

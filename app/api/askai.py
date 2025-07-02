@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from app.agent.agent import ask_genailabs_ai
+from app.assistant.assistant import ask_genailabs_ai
 from app.utils.helpers import get_celery_job_status
 
 router = APIRouter()

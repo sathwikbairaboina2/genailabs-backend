@@ -19,7 +19,7 @@ logger = get_logger(__name__)
 def update_usage_count(chunk_id: str, increment: int = 1):
     try:
         result = chunk_collection.update_one(
-            {"_id": chunk_id}, {"$inc": {"usage_count": increment}}
+            {"chunk_id": chunk_id}, {"$inc": {"usage_count": increment}}
         )
         if result.modified_count == 0:
             raise HTTPException(

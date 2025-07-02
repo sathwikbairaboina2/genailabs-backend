@@ -4,6 +4,7 @@ from fastapi import HTTPException
 from app.core.logging import get_logger
 from app.modals.similarity import QueryLog
 from app.schemas.similarity import SimilarityRequest
+from app.services.chunk_service import update_usage_count
 from app.services.journal_service import update_journal_status
 from app.services.similarity_service import add_query_log, update_query_log
 from app.tasks.background_tasks import semantic_search
@@ -38,13 +39,16 @@ async def start_search_handler(request: SimilarityRequest):
 async def get_search_results(job_id: str):
     try:
         result = get_celery_job_status(job_id)
+
         if result["status"] == "completed":
             similarity_search_results = result["result"]
             chunk_ids = [item["_id"] for item in similarity_search_results]
-            # update_query_log(journal_id=job_id, status="completed", chunk_ids=chunk_ids)
+            for id in chunk_ids:
+                update_usage_count(id, 1)
             return {"results": similarity_search_results}
         else:
             return result
 
     except Exception as e:
+        logger.error(f"Failed to get similarity search results: {e}")
         raise HTTPException(status_code=500, detail=str(e))

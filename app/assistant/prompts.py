@@ -21,7 +21,8 @@ Now provide your answer based solely on the journal context above."""
 )
 
 
-intent_analysis_prompt = """You are a helpful assistant. Given a user's question, do the following:
+intent_analysis_prompt = ChatPromptTemplate.from_template(
+    """You are a helpful assistant. Given a user's question, do the following:
 
 1. **Determine the intent** of the question. It should be one of:
    - "qa": if the user is asking a question and expecting a factual answer from a document.
@@ -38,3 +39,4 @@ Your response must be valid JSON in the following format:
 
 Question: {question}
 """
+)

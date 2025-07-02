@@ -1,7 +1,6 @@
 import os
 import json
 import uuid
-import pandas as pd
 from typing import List, Dict, Optional, Any
 from celery import Celery, signals
 from langchain.docstore.document import Document
@@ -31,6 +30,7 @@ celery_app = Celery("worker", backend=result_backend, broker=broker_url)
 
 
 vector_store = None
+research_assistant_collection = "genailabs_research_assistant"
 
 
 @signals.worker_process_init.connect
@@ -58,7 +58,7 @@ def setup_vector_store(**kwargs):
             embedding=embedder,
             sparse_embedding=sparse,
             url=qdrant_host,
-            collection_name="my_collection",
+            collection_name=research_assistant_collection,
             retrieval_mode=RetrievalMode.HYBRID,
             force_recreate=False,
             prefer_grpc=False,
@@ -121,7 +121,7 @@ def semantic_search(
 def update_vector_embeddings(records: List[Dict[str, Any]]) -> Dict[str, List[str]]:
     global vector_store
 
-    collection_name = "my_collection"
+    collection_name = research_assistant_collection
     client = vector_store.client
     succeeded_ids = []
     failed_ids = []
@@ -171,3 +171,18 @@ def update_vector_embeddings(records: List[Dict[str, Any]]) -> Dict[str, List[st
     except Exception as e:
         logger.error(f"Exception during vector embedding update: {e}")
         raise RuntimeError(f"Failed to update vector embeddings: {e}")
+
+
+@celery_app.task
+def search_vectorstore_by_metadata(doc_ids: List[str]):
+    global vector_store
+    client = vector_store.client
+
+    results = client.scroll(
+        collection_name=research_assistant_collection,
+        filter=Filter(must=[FieldCondition(key="id", match=MatchValue(value=doc_ids))]),
+    )
+
+    logger.info(f"Search results: {results}")
+
+    return results
