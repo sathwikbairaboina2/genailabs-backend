@@ -1,17 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from app.assistant.assistant import ask_genailabs_ai
-from app.utils.helpers import get_celery_job_status
 
 router = APIRouter()
-
-
-@router.get("/{job_id}")
-async def get_askai_response(job_id: str):
-    try:
-        result = await get_celery_job_status(job_id)
-        return result
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.post("/")

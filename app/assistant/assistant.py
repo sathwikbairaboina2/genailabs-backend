@@ -1,5 +1,6 @@
 from langchain_core.output_parsers import StrOutputParser
 from langgraph.graph import StateGraph, END
+from app.assistant.context_builder import context_builder_rag
 from app.assistant.retrivers import (
     retriever_compare_docs_rag,
     retriever_qa_rag,
@@ -8,26 +9,8 @@ from app.assistant.retrivers import (
 from app.core.langgrapgh import llm
 from app.core.logging import get_logger
 from app.schemas.agent_state import AgentState
-from app.assistant.prompts import prompt_template_qa
 from app.assistant.chains import extract_intent_chain, generatorLLMchain
 
-
-# {
-#   "results": [
-#     {
-#       "similarity_score": 0.8333,
-#       "text": "Velvet bean–Mucuna pruriens var. utilis, also known as mucuna—is a twining annual leguminous vine...",
-#       "_id": "550e8400-e29b-41d4-a716-446655440001",
-#       "_collection_name": "genailabs_research_assistant"
-#     },
-#     {
-#       "similarity_score": 0.75,
-#       "text": "Mucuna is susceptible to fungal infections and pest attacks. Integrated pest management practices are recommended...",
-#       "_id": "550e8400-e29b-41d4-a716-446655440005",
-#       "_collection_name": "genailabs_research_assistant"
-#     }
-#   ]
-# }
 
 import json
 
@@ -35,7 +18,14 @@ import json
 logger = get_logger(__name__)
 
 
-def extract_intent_and_docs(state: AgentState):
+def context_builder(state: AgentState):
+
+    logger.info(f"Building context for question: {state}")
+    context = context_builder_rag(state)
+    return context
+
+
+def extract_intent_from_user_input(state: AgentState):
     logger.info(f"Extracting intent and docs for question: {state}")
     parsed = extract_intent_chain.invoke({"question": state["question"]})
 
@@ -48,20 +38,24 @@ def extract_intent_and_docs(state: AgentState):
     }
 
 
-def context_builder(state: AgentState):
-    logger.info(f"Building context for question: {state}")
-    return "\n\n".join(state.get("context", []))
-
-
 def generator(state: AgentState):
-    logger.info(f"Generating answer for question: {state}")
-    context = context_builder(state)
-    prompt = prompt_template_qa.invoke(
-        {"question": state["question"], "context": context}
-    )
-    response = generatorLLMchain.invoke(prompt)
-    logger.info(f"Generated answer: {response  , prompt}")
-    return ({"answer": response},)
+    try:
+        logger.info(f"Generating answer for question: {state}")
+        context = context_builder(state)
+        response = generatorLLMchain.invoke(
+            {"question": state["question"], "context": context}
+        )
+        parsed_response = json.loads(response)
+        logger.info(f"Generated answer: {parsed_response}")
+        return {
+            "answer": {
+                "answer": parsed_response["answer"],
+                "document_ids": parsed_response["document_ids"],
+                "references": parsed_response["references"],
+            }
+        }
+    except Exception as e:
+        logger.error(f"Error in generator: {e}", exc_info=True)
 
 
 def route_by_intent(state: AgentState):
@@ -71,7 +65,7 @@ def route_by_intent(state: AgentState):
 graph = StateGraph(AgentState)
 
 
-graph.add_node("extract", extract_intent_and_docs)
+graph.add_node("extract", extract_intent_from_user_input)
 graph.add_node("qa_retrieve", retriever_qa_rag)
 graph.add_node("summarize_retrieve", retriever_summarizer_rag)
 graph.add_node("compare_retrieve", retriever_compare_docs_rag)
@@ -100,4 +94,7 @@ workflow = graph.compile()
 
 
 def ask_genailabs_ai(question: str):
-    return workflow.invoke({"question": question})
+    try:
+        return workflow.invoke({"question": question})
+    except Exception as e:
+        logger.error(f"Error in ask_genailabs_ai: {e}", exc_info=True)

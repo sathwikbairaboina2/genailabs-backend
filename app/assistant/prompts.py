@@ -2,22 +2,42 @@ from langchain_core.prompts import ChatPromptTemplate
 
 from langchain_core.prompts import ChatPromptTemplate
 
-prompt_template_qa = ChatPromptTemplate.from_template(
+prompt_template_genaerator = ChatPromptTemplate.from_template(
     """You are an AI research assistant helping users understand scientific journal content.
-Use only the information provided in the journal context to answer the user's question.
+Use the information provided in the journal context to answer the user's question. Rely primarily on the context. If the answer can be reasonably inferred, answer cautiously and make it clear.
+
+---
 
 Journal Context:
 {context}
 
+---
+
 User Question:
 {question}
 
-Guidelines:
-- Your response must be grounded in the provided context. Do not rely on external knowledge.
-- If the answer cannot be found in the context, reply with: "The context does not contain enough information to answer the question."
-- Provide clear, concise, and informative answers suitable for a research audience.
+---
 
-Now provide your answer based solely on the journal context above."""
+Guidelines:
+- Your response must be based on the journal context.
+- Do NOT include document IDs or document links inside the "answer" text.
+- Instead, list supporting document IDs and references separately in their respective fields.
+- If no relevant information is found in the context, return exactly:
+  {{
+    "answer": "The context does not contain enough information to answer the question.",
+    "document_ids": [],
+    "references": []
+  }}
+
+---
+
+Respond strictly in the following valid JSON format:
+{{
+  "answer": "<your generated answer here>",
+  "document_ids": ["<document_id_1>", "<document_id_2>", ...],
+  "references": ["<document_link_1>", "<document_link_2>", ...]
+}}
+"""
 )
 
 

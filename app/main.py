@@ -17,7 +17,7 @@ async def root():
     return {"message": "Welcome to genai labs  research assistant!"}
 
 
-@app.on_event("startup")
-def startup_event():
-    test_mongo_connection()
-    create_chunk_indexes()
+# @app.on_event("startup")
+# def startup_event():
+#     # test_mongo_connection()
+#     # create_chunk_indexes()

@@ -5,8 +5,7 @@ from app.core.logging import get_logger
 from app.modals.similarity import QueryLog
 from app.schemas.similarity import SimilarityRequest
 from app.services.chunk_service import update_usage_count
-from app.services.journal_service import update_journal_status
-from app.services.similarity_service import add_query_log, update_query_log
+from app.services.similarity_service import add_query_log
 from app.tasks.background_tasks import semantic_search
 from app.utils.helpers import get_celery_job_status
 
