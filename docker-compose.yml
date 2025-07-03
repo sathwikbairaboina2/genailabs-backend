@@ -17,19 +17,19 @@ services:
       - QDRANT_HOST=qdrant
       - GRPC_DNS_RESOLVER=native
 
-  celery:
-    image: genailabs
-    container_name: celery-worker
-    command: celery -A app.tasks.background_tasks worker --loglevel=info --concurrency=1
-    depends_on:
-      - redis
-      - qdrant
-    restart: unless-stopped
-    environment:
-      - CELERY_BROKER_URL=redis://redis:6379
-      - CELERY_RESULT_BACKEND=redis://redis:6379
-      - QDRANT_HOST=qdrant
-      - GRPC_DNS_RESOLVER=native
+  # celery:
+  #   image: genailabs
+  #   container_name: celery-worker
+  #   command: celery -A app.tasks.background_tasks worker --loglevel=info --concurrency=1
+  #   depends_on:
+  #     - redis
+  #     - qdrant
+  #   restart: unless-stopped
+  #   environment:
+  #     - CELERY_BROKER_URL=redis://redis:6379
+  #     - CELERY_RESULT_BACKEND=redis://redis:6379
+  #     - QDRANT_HOST=qdrant
+  #     - GRPC_DNS_RESOLVER=native
 
   redis:
     image: redis:7.2

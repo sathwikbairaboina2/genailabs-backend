@@ -7,6 +7,7 @@ from langchain.docstore.document import Document
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_qdrant import QdrantVectorStore, RetrievalMode, FastEmbedSparse
 from qdrant_client.http.models import Filter, FieldCondition, MatchValue, Range
+from app.core.logging import get_logger
 
 
 def is_valid_uuid(val: str) -> bool:
@@ -16,8 +17,6 @@ def is_valid_uuid(val: str) -> bool:
     except (ValueError, TypeError):
         return False
 
-
-from app.core.logging import get_logger
 
 logger = get_logger(__name__)
 
@@ -171,17 +170,3 @@ def update_vector_embeddings(records: List[Dict[str, Any]]) -> Dict[str, List[st
     except Exception as e:
         logger.error(f"Exception during vector embedding update: {e}")
         raise RuntimeError(f"Failed to update vector embeddings: {e}")
-
-
-def search_vectorstore_by_metadata(doc_ids: List[str]):
-    global vector_store
-    client = vector_store.client
-
-    results = client.scroll(
-        collection_name=research_assistant_collection,
-        filter=Filter(must=[FieldCondition(key="id", match=MatchValue(value=doc_ids))]),
-    )
-
-    logger.info(f"Search results: {results}")
-
-    return results
