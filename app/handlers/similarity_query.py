@@ -40,13 +40,17 @@ async def get_search_results(job_id: str):
         result = get_celery_job_status(job_id)
 
         if result["status"] == "completed":
+
             similarity_search_results = result["result"]
-            chunk_ids = [item["_id"] for item in similarity_search_results]
-            for id in chunk_ids:
-                update_usage_count(id, 1)
+            valid_items = filter(lambda item: "_id" in item, similarity_search_results)
+            chunk_ids = [item["_id"] for item in valid_items]
+            if len(chunk_ids) == 0:
+                for id in chunk_ids:
+                    update_usage_count(id, 1)
             return {"results": similarity_search_results}
         else:
             return result
+
 
     except Exception as e:
         logger.error(f"Failed to get similarity search results: {e}")

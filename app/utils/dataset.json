@@ -1,17 +1,15 @@
 [
   {
-    "id": "mucuna_01_intro",
-    "source_doc_id": "extension_brief_mucuna.pdf",
-    "chunk_index": 1,
-    "section_heading": "Velvet bean description",
-    "journal": "ILRI extension brief",
-    "publish_year": 2016,
-    "usage_count": 42,
-    "attributes": [
-      "Botanical description",
-      "Morphology"
-    ],
-    "link": "https://cgspace.cgiar.org/server/api/core/bitstreams/68bfaec0-8d32-4567-9133-7df9ec7f3e23/content",
-    "text": "Velvet bean–Mucuna pruriens var. utilis, also known as mucuna—is a twining annual leguminous vine common to most parts of the tropics. Its growth is restricted to the wet-season as it dies at the onset of the cold season. It has large trifoliate leaves (i.e. has three leaflets) and very long vigorous twining stems that can extend over two–three metres depending on growth conditions. When planted at the beginning of the growing season, flowers normally form at the end of March/early April. These flowers are deep purple and appear underneath the foliage. Seeds are large, ovoid shaped (±10 mm long) and of different colours, ranging from white, grey, brown to black and mottled."
+      "id": "c3e1f90b-2cde-4e47-bd2a-9f82c5a83d77",
+      "source_doc_id": "deep_space_exploration_2025.pdf",
+      "chunk_index": 7,
+      "section_heading": "Introduction to Exoplanets",
+      "journal": "Space Science Digest",
+      "publish_year": 2025,
+      "usage_count": 12,
+      "attributes": ["Astronomy", "Planetary Science"],
+      "link": "https://space.example.org/docs/exoplanets",
+      "text": "Exoplanets are planets that orbit stars outside our solar system. The study of these distant worlds is crucial for understanding the potential for life beyond Earth."
   }
+
 ]
