@@ -4,6 +4,7 @@ from app.handlers.similarity_query import get_search_results, start_search_handl
 
 router = APIRouter()
 
+#note wrapping this endpoint in celery is not a compulsion for retrieving results , unless we are using very large embedding model
 
 class QueryRequest(BaseModel):
     query: str
