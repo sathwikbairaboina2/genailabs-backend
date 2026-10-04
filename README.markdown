@@ -1,136 +1,90 @@
 # 🧠 GenAI Labs Research Assistant
 
-An AI-powered backend system that performs real-time document ingestion, similarity search, and intent-based AI responses using FastAPI, Celery, Qdrant, and Redis.
+> A FastAPI and Celery backend that ingests research-document chunks into Qdrant and answers questions over them with an intent-routing LangGraph agent.
 
-## 🖼️ Architecture Overview
+**GenAI Labs is an asynchronous document-retrieval backend: uploads are embedded by Celery workers into a hybrid (dense plus BM25) Qdrant collection, similarity search runs as a job, and `/api/askai/` classifies the question as Q&A, summarise or compare and answers with Claude from the retrieved chunks.**
 
-![Architecture Diagram](docs/fastapi-celery-flow.png)
+<!-- readme-header -->
+![Python](https://img.shields.io/badge/-Python-555) ![FastAPI](https://img.shields.io/badge/-FastAPI-555) ![Celery](https://img.shields.io/badge/-Celery-555) ![Qdrant](https://img.shields.io/badge/-Qdrant-555) ![LangGraph](https://img.shields.io/badge/-LangGraph-555) ![MongoDB](https://img.shields.io/badge/-MongoDB-555) ![Redis](https://img.shields.io/badge/-Redis-555)
 
-This architecture shows how Celery handles background tasks. A client uploads a file, which is queued for background processing. Celery workers then chunk, embed, and store results in Qdrant. Clients can query the status or results later asynchronously.
+## What it does
 
-The diagram illustrates the ingestion pipeline:
+- **Ingestion.** `PUT /api/upload/` accepts a JSON file or a URL of pre-chunked documents. FastAPI queues the work on Redis, a Celery worker embeds each chunk (`all-MiniLM-L6-v2` dense plus `Qdrant/bm25` sparse) and upserts it into the `genailabs_research_assistant` Qdrant collection. Journal and chunk records are kept in MongoDB. The client polls a job id for status.
+- **Similarity search.** `POST /api/similarity/` takes a query, `top_k` and `min_score`, and returns results through a job id.
+- **Ask AI.** `POST /api/askai/` runs a LangGraph agent that extracts the intent and any document ids from the question, then routes to Q&A over retrieved chunks, summarisation of one document by `source_doc_id`, or comparison of two documents. The model is Claude through `langchain_anthropic`.
 
--   The client triggers journal file processing via FastAPI.
--   FastAPI enqueues chunking and embedding tasks to Redis (broker).
--   Celery workers process the content asynchronously.
--   Metadata and embeddings are saved to Qdrant.
--   Client can query task status or search enriched results.
+## Architecture
 
-This decoupled, asynchronous approach ensures scalability and efficient resource utilization.
+![Ingestion flow](docs/fastapi-celery-flow.png)
 
-## Setup Instructions
-
-### 📁 Environment Variables
-
-Before starting, create a `.env` file at the root of the project with the following:
-
-```
-MONGO_URI=mongodb://admin:password@mongodb:27017/genailabs_db?authSource=admin
-MONGO_DB_NAME=genailabs_db
-ANTHROPIC_API_KEY="your api key here"
-```
-
-### 🔧 Build the Docker Image
-
-```bash
-docker build -t genailabs .
+```mermaid
+flowchart LR
+  C[client] --> F[FastAPI]
+  F -->|enqueue| R[(Redis broker)]
+  R --> W[Celery worker]
+  W -->|embed + upsert| Q[(Qdrant)]
+  F --> M[(MongoDB)]
+  F -->|askai| L[LangGraph agent]
+  L -->|retrieve| Q
+  L --> A[Claude]
 ```
 
-⚠️ This may take 7–10 minutes on the first build due to dependency installation.
+A write-up of the ingestion pipeline is in [docs/Ingestion_Pipeline.pdf](docs/Ingestion_Pipeline.pdf).
 
-### 🐳 Start the Containers
+## Quickstart
 
-```bash
-docker-compose up -d
+Requires Docker.
+
+1. Create a `.env` at the repo root (it is git-ignored). Use your own values:
+
+   ```
+   MONGO_URI=<mongodb connection string>
+   MONGO_DB_NAME=genailabs_db
+   ANTHROPIC_API_KEY=<your Anthropic API key>
+   ```
+
+   `MONGO_URI` defaults to the `mongodb` service in `docker-compose.yml` if unset; see `app/core/config.py`. Without an API key the app starts but Ask AI will not work.
+
+2. Build and start (the first build takes several minutes):
+
+   ```bash
+   docker build -t genailabs .
+   docker-compose up -d
+   ```
+
+3. Open the Swagger docs at http://localhost:8001/docs.
+
+The compose file starts the API, one Celery worker, Redis, Qdrant and MongoDB. There is no test suite in this repo.
+
+## API
+
+| Method | Endpoint | Description |
+|---|---|---|
+| PUT | `/api/upload/` | Upload a JSON file or `file_url` (form fields `file` or `file_url`, plus required `schema_version`) |
+| GET | `/api/{job_id}` | Embedding job status and result |
+| GET | `/api/journal/{journal_id}` | Chunks for a journal |
+| POST | `/api/similarity/` | Start a similarity search |
+| GET | `/api/similarity/{job_id}` | Similarity search results |
+| POST | `/api/askai/?question=...` | Ask a question; routed by intent |
+
+Each uploaded chunk needs a UUID `id`, `source_doc_id`, `chunk_index`, `section_heading`, `journal`, `publish_year` (YYYY), `usage_count`, `attributes`, `link` and `text`. A sample file is in `app/utils/dataset.json`.
+
+## Configuration
+
+Environment variable names: `MONGO_URI`, `MONGO_DB_NAME`, `ANTHROPIC_API_KEY`, `CELERY_BROKER_URL`, `CELERY_RESULT_BACKEND`, `QDRANT_HOST` (the last three are set by `docker-compose.yml`).
+
+## Project layout
+
+```
+app/api         FastAPI routers (embeddings, similarity, askai)
+app/handlers    request handlers for upsert and search jobs
+app/tasks       Celery app and embedding/search tasks
+app/assistant   LangGraph agent, chains, prompts, retrievers, Qdrant access
+app/services    MongoDB-backed journal and chunk services
+app/core        settings, Mongo client, logging, LLM setup
+docs            architecture diagram and ingestion pipeline PDF
 ```
 
-This starts the FastAPI server and Celery worker. You are good to go now!
+## Status
 
-### 🌐 Access the API
-
-Once the containers are running, visit the Swagger docs:  
-[http://localhost:8001/docs](http://localhost:8001/docs)
-
-You’ll see the following available endpoints:
-
-#### 🧠 Embeddings
-
-| Method | Endpoint                    | Description                       |
-| ------ | --------------------------- | --------------------------------- |
-| PUT    | `/api/upload/`              | Upload JSON file or URL           |
-| GET    | `/api/{job_id}`             | Get embedding task status/results |
-| GET    | `/api/journal/{journal_id}` | Get journal chunks                |
-
-#### ⚠️ Important Notes for Uploading Files
-
--   The `id` field must be a valid UUID. It is mandatory for embedding creation.
--   The `publish_year` should follow the YYYY format.
--   Each chunk must include metadata fields like `source_doc_id`, `journal`, `usage_count`, `attributes`, and `text`.
-
-#### ✅ Example Upload Payload:
-
-```json
-[
-    {
-        "id": "00a72a58-a447-43ae-a36d-bd8397f3e224",
-        "source_doc_id": "updated_farming_guide_mucuna.pdf",
-        "chunk_index": 4,
-        "section_heading": "Cultivation Guidelines",
-        "journal": "Farming Guide",
-        "publish_year": 2019,
-        "usage_count": 23,
-        "attributes": ["Cultivation", "Planting techniques"],
-        "link": "https://example.org/bitstream/content2",
-        "text": "Proper cultivation of mucuna involves land preparation, spacing, and seasonal monitoring for best yield..."
-    },
-    {
-        "id": "836e175e-f277-48b2-a257-ead22e8ca5e9",
-        "source_doc_id": "updated_plant_health_mucuna.pdf",
-        "chunk_index": 5,
-        "section_heading": "Common Diseases",
-        "journal": "Plant Health Reports",
-        "publish_year": 2020,
-        "usage_count": 18,
-        "attributes": ["Diseases", "Pest management"],
-        "link": "https://example.org/bitstream/content3",
-        "text": "Mucuna is susceptible to fungal infections and pest attacks. Integrated pest management practices are recommended..."
-    },
-    {
-        "id": "b2af23c8-231b-4e61-88aa-1a54d61cd02a",
-        "source_doc_id": "updated_market_trends_mucuna.pdf",
-        "chunk_index": 6,
-        "section_heading": "Market Opportunities",
-        "journal": "AgriBusiness Journal",
-        "publish_year": 2021,
-        "usage_count": 51,
-        "attributes": ["Market", "Export potential"],
-        "link": "https://example.org/bitstream/content4",
-        "text": "Mucuna has seen a rise in market demand due to its value in biofertilizers and livestock feed markets..."
-    }
-]
-```
-
-#### 🔍 Similarity Search
-
-| Method | Endpoint                   | Description                   |
-| ------ | -------------------------- | ----------------------------- |
-| POST   | `/api/similarity/`         | Start similarity search       |
-| GET    | `/api/similarity/{job_id}` | Get similarity search results |
-
-#### 💬 Ask AI
-
-| Method | Endpoint      | Description                                                   |
-| ------ | ------------- | ------------------------------------------------------------- |
-| POST   | `/api/askai/` | Start AI query based on intent and retrieved document context |
-
-### 🧠 AI Agent Capabilities
-
-The `/api/askai/` endpoint is powered by an AI agent that can:
-
--   🔍 Analyze user intent from the question
--   📖 Route queries to:
-    -   Q&A using relevant chunks via similarity search (Qdrant)
-    -   Summarization of a document based on `source_doc_id`
-    -   Comparison between two documents side-by-side based on source id
-
-Powered by Celery + FastAPI + Qdrant. Scalable. Modular. Intelligent.
+Working prototype. The compose file has development defaults (published ports, unauthenticated Qdrant and Redis, a throwaway MongoDB root user) and is not hardened for deployment. The Ask AI endpoint is configured for a Claude 3 Sonnet model id in `app/core/langgrapgh.py`, which may need updating to a current model. No tests, CI or license file are present.
